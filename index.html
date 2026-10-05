@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>For Salma ❤️</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -24,12 +23,10 @@ body{
     min-height:100vh;
     overflow:hidden;
     font-family:"Poppins",sans-serif;
-
     background:
         radial-gradient(circle at 15% 20%,rgba(255,255,255,.25),transparent 28%),
         radial-gradient(circle at 85% 80%,rgba(255,255,255,.2),transparent 30%),
         linear-gradient(135deg,#ff758c,#ff7eb3,#c471ed,#8e7dff);
-
     background-size:200% 200%;
     animation:bgMove 12s ease infinite;
 }
@@ -45,13 +42,10 @@ body{
 .page{
     position:fixed;
     inset:0;
-
     display:none;
     align-items:center;
     justify-content:center;
-
     padding:20px;
-
     text-align:center;
 }
 
@@ -59,27 +53,21 @@ body{
     display:flex;
 }
 
-/* GLASS CARD */
+/* CARD */
 
 .card{
     width:min(92vw,440px);
     max-height:92vh;
     overflow:auto;
-
     padding:38px 25px;
-
     border-radius:32px;
-
     background:rgba(255,255,255,.20);
     border:1px solid rgba(255,255,255,.45);
-
     backdrop-filter:blur(25px);
     -webkit-backdrop-filter:blur(25px);
-
     box-shadow:
         0 30px 80px rgba(40,0,40,.30),
         inset 0 1px 0 rgba(255,255,255,.65);
-
     animation:cardIn .8s cubic-bezier(.2,.8,.2,1);
 }
 
@@ -92,7 +80,6 @@ body{
         opacity:0;
         transform:translateY(35px) scale(.92);
     }
-
     to{
         opacity:1;
         transform:translateY(0) scale(1);
@@ -104,35 +91,23 @@ body{
 .big-heart{
     width:110px;
     height:110px;
-
     margin:0 auto 18px;
-
     display:flex;
     align-items:center;
     justify-content:center;
-
     border-radius:50%;
-
     font-size:58px;
-
     background:rgba(255,255,255,.28);
     border:1px solid rgba(255,255,255,.55);
-
     box-shadow:
         0 15px 40px rgba(255,0,80,.2),
         inset 0 2px 12px rgba(255,255,255,.6);
-
     animation:heartbeat 1.5s ease-in-out infinite;
 }
 
 @keyframes heartbeat{
-    0%,100%{
-        transform:scale(1);
-    }
-
-    50%{
-        transform:scale(1.10);
-    }
+    0%,100%{transform:scale(1)}
+    50%{transform:scale(1.10)}
 }
 
 .small-title{
@@ -144,14 +119,10 @@ body{
 
 h1{
     margin:10px 0 14px;
-
     font-family:"Great Vibes",cursive;
     font-size:52px;
-
     color:white;
-
-    text-shadow:
-        0 4px 20px rgba(100,0,50,.2);
+    text-shadow:0 4px 20px rgba(100,0,50,.2);
 }
 
 .question{
@@ -164,27 +135,19 @@ h1{
     display:flex;
     justify-content:center;
     gap:14px;
-
     margin-top:28px;
 }
 
 button{
     border:0;
     outline:0;
-
     padding:13px 28px;
-
     border-radius:50px;
-
     font-family:"Poppins",sans-serif;
     font-size:14px;
     font-weight:500;
-
     cursor:pointer;
-
-    transition:
-        transform .25s ease,
-        box-shadow .25s ease;
+    transition:transform .25s ease,box-shadow .25s ease;
 }
 
 button:hover{
@@ -197,12 +160,8 @@ button:active{
 
 .yes{
     color:white;
-
-    background:
-        linear-gradient(135deg,#ff1744,#ff5c8a);
-
-    box-shadow:
-        0 12px 30px rgba(255,0,80,.40);
+    background:linear-gradient(135deg,#ff1744,#ff5c8a);
+    box-shadow:0 12px 30px rgba(255,0,80,.40);
 }
 
 .no{
@@ -216,122 +175,84 @@ button:active{
     color:white;
     font-size:21px;
     font-weight:500;
-
     margin-bottom:8px;
 }
 
 .flower-subtitle{
     color:rgba(255,255,255,.75);
     font-size:12px;
-
     margin-bottom:15px;
 }
 
 .flower-area{
     height:300px;
-
     position:relative;
     overflow:hidden;
-
     border-radius:25px;
-
     background:rgba(255,255,255,.08);
 }
 
 .flower{
     position:absolute;
     bottom:-70px;
-
     animation:flowerUp linear forwards;
-
     pointer-events:none;
 }
 
 @keyframes flowerUp{
-
     0%{
-        transform:
-            translateY(0)
-            rotate(0deg)
-            scale(.4);
-
+        transform:translateY(0) rotate(0deg) scale(.4);
         opacity:0;
     }
-
     15%{
         opacity:1;
     }
-
     100%{
-        transform:
-            translateY(-380px)
-            rotate(360deg)
-            scale(1.25);
-
+        transform:translateY(-380px) rotate(360deg) scale(1.25);
         opacity:0;
     }
 }
 
-/* NEXT */
+/* NEXT BUTTON */
 
 .next{
     margin-top:20px;
-
     color:#d6336c;
-
     background:white;
-
     font-weight:600;
-
-    box-shadow:
-        0 10px 30px rgba(0,0,0,.15);
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
 }
 
 /* PHOTO PAGE */
 
 .photo-title{
     color:white;
-
     font-family:"Great Vibes",cursive;
-
     font-size:40px;
-
     margin-bottom:5px;
 }
 
 .photo-subtitle{
     color:rgba(255,255,255,.75);
-
     font-size:12px;
-
     margin-bottom:20px;
 }
 
 .photos{
     display:grid;
-
     grid-template-columns:1fr 1fr;
-
     gap:12px;
 }
 
 .photo{
     display:block;
-
     width:100%;
     height:175px;
-
     object-fit:cover;
-
     border-radius:20px;
-
     border:3px solid rgba(255,255,255,.7);
-
-    box-shadow:
-        0 10px 25px rgba(0,0,0,.20);
-
+    box-shadow:0 10px 25px rgba(0,0,0,.20);
     animation:photoIn .7s ease both;
-
     background:rgba(255,255,255,.15);
 }
 
@@ -352,7 +273,6 @@ button:active{
         opacity:0;
         transform:scale(.75) rotate(-4deg);
     }
-
     to{
         opacity:1;
         transform:scale(1) rotate(0);
@@ -363,96 +283,65 @@ button:active{
 
 .note{
     position:relative;
-
     padding:34px 24px 28px;
-
-    background:
-        linear-gradient(
-            rgba(255,255,255,.95),
-            rgba(255,250,242,.95)
-        );
-
+    background:linear-gradient(
+        rgba(255,255,255,.95),
+        rgba(255,250,242,.95)
+    );
     border-radius:8px;
-
     color:#49313b;
-
     text-align:left;
-
-    box-shadow:
-        0 25px 60px rgba(0,0,0,.25);
-
+    box-shadow:0 25px 60px rgba(0,0,0,.25);
     transform:rotate(-1deg);
-
     overflow:hidden;
 }
 
 .note::before{
     content:"";
-
     position:absolute;
-
     left:0;
     right:0;
     top:0;
-
     height:8px;
-
-    background:
-        linear-gradient(
-            90deg,
-            #ff4d6d,
-            #ff9a9e,
-            #c471ed
-        );
+    background:linear-gradient(
+        90deg,
+        #ff4d6d,
+        #ff9a9e,
+        #c471ed
+    );
 }
 
 .note::after{
     content:"";
-
     position:absolute;
-
     width:100px;
     height:100px;
-
     right:-40px;
     bottom:-45px;
-
     border-radius:50%;
-
     background:rgba(255,120,160,.08);
 }
 
 .note h2{
     text-align:center;
-
     font-family:"Great Vibes",cursive;
-
     font-size:42px;
-
     color:#d6336c;
-
     margin-bottom:20px;
 }
 
 .note p{
     font-family:"Poppins",sans-serif;
-
     font-size:13.5px;
-
     line-height:2;
-
     color:#59414c;
 }
 
 .signature{
     margin-top:22px;
-
     text-align:right;
-
     font-family:"Great Vibes",cursive;
-
     font-size:30px;
-
     color:#d6336c;
 }
 
@@ -460,37 +349,22 @@ button:active{
 
 .floating{
     position:fixed;
-
     bottom:-40px;
-
     pointer-events:none;
-
     z-index:999;
-
     animation:floatUp linear forwards;
 }
 
 @keyframes floatUp{
-
     from{
-        transform:
-            translateY(0)
-            rotate(0deg)
-            scale(.7);
-
+        transform:translateY(0) rotate(0deg) scale(.7);
         opacity:0;
     }
-
     15%{
         opacity:1;
     }
-
     to{
-        transform:
-            translateY(-115vh)
-            rotate(360deg)
-            scale(1.3);
-
+        transform:translateY(-115vh) rotate(360deg) scale(1.3);
         opacity:0;
     }
 }
@@ -499,31 +373,20 @@ button:active{
 
 .music{
     position:fixed;
-
     top:18px;
     right:18px;
-
     width:44px;
     height:44px;
-
     padding:0;
-
     display:flex;
     align-items:center;
     justify-content:center;
-
     border-radius:50%;
-
     color:white;
-
     background:rgba(255,255,255,.20);
-
     border:1px solid rgba(255,255,255,.4);
-
     backdrop-filter:blur(10px);
-
     z-index:9999;
-
     font-size:18px;
 }
 
@@ -557,4 +420,471 @@ button:active{
         padding:32px 20px 25px;
     }
 
-    .note
+    .note h2{
+        font-size:38px;
+    }
+
+    .note p{
+        font-size:12.5px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- MUSIC -->
+
+<audio
+    id="bgMusic"
+    src="./song.mp3"
+    loop
+    preload="auto">
+</audio>
+
+<button
+    class="music"
+    id="musicBtn"
+    onclick="toggleMusic()">
+    🔇
+</button>
+
+
+<!-- PAGE 1 -->
+
+<section class="page active" id="page1">
+
+    <div class="card">
+
+        <div class="big-heart">
+            ❤️
+        </div>
+
+        <div class="small-title">
+            A Little Surprise
+        </div>
+
+        <h1>
+            I Love You Salma
+        </h1>
+
+        <div class="question">
+            তুমি কি আমাকে ভালোবাসো? 🥺❤️
+        </div>
+
+        <div class="buttons">
+
+            <button
+                class="yes"
+                onclick="goToFlowers()">
+                Yes ❤️
+            </button>
+
+            <button
+                class="no"
+                type="button">
+                No 🙈
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PAGE 2 -->
+
+<section class="page" id="page2">
+
+    <div class="card">
+
+        <div class="flower-title">
+            🫶🏻 শুধু তোমার জন্য 💝
+        </div>
+
+        <div class="flower-subtitle">
+            কিছু ফুল, কিছু অনুভূতি... ❤️
+        </div>
+
+        <div
+            class="flower-area"
+            id="flowerArea">
+        </div>
+
+        <button
+            class="next"
+            onclick="goToPhotos()">
+            Next ➜
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- PAGE 3 -->
+
+<section class="page" id="page3">
+
+    <div class="card">
+
+        <div class="photo-title">
+            Beautiful Memories
+        </div>
+
+        <div class="photo-subtitle">
+            MY LIFE MY_LOVE 💝🫶🏻
+        </div>
+
+        <div class="photos">
+
+            <img
+                class="photo"
+                src="./salma1.jpg"
+                alt="Salma">
+
+            <img
+                class="photo"
+                src="./salma2.jpg"
+                alt="Salma">
+
+            <img
+                class="photo"
+                src="./salma3.jpg"
+                alt="Salma">
+
+            <img
+                class="photo"
+                src="./salma4.jpg"
+                alt="Salma">
+
+        </div>
+
+        <button
+            class="next"
+            onclick="goToNote()">
+            Next ➜
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- PAGE 4 -->
+
+<section class="page" id="page4">
+
+    <div class="card">
+
+        <div class="note">
+
+            <h2>
+                For Salma 🥰🌸
+            </h2>
+
+            <p>
+
+                প্রিয় সালমা, 🫶🏻💝
+
+                <br><br>
+
+                এই ছোট্ট ওয়েবসাইটটা হয়তো খুব
+                বড় কোনো উপহার না, কিন্তু এর
+                প্রতিটা অংশ তোমার জন্য একটু
+                সুন্দর একটা মুহূর্ত তৈরি করার
+                ছোট্ট একটা চেষ্টা।
+
+                <br><br>
+
+                জীবনে কিছু মানুষ আসে, যাদের
+                উপস্থিতি সাধারণ একটা দিনকেও
+                একটু বেশি সুন্দর করে তোলে।
+                তোমাকে নিয়ে আমার অনুভূতিটাও
+                ঠিক তেমনই।
+
+                <br><br>
+
+                তোমার হাসি, তোমার কথা আর
+                তোমার ছোট ছোট মুহূর্তগুলো
+                আমার কাছে অনেক মূল্যবান।
+
+                <br><br>
+
+                হয়তো সব কথা মুখে বলা যায় না,
+                তাই এই ছোট্ট পেজটার মাধ্যমে
+                কিছু কথা বলতে চেয়েছি।
+
+                <br><br>
+
+                I really love u salmú 🫶🏻💝
+
+                <br>
+
+                আল্লাহ যেন তোমাকে সারাজীবন
+                আমার করে রাখে। 🫶🏻💝🥰🥀
+
+            </p>
+
+            <div class="signature">
+                — তোমার জন্য 💗
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+
+/* MUSIC */
+
+const bgMusic =
+    document.getElementById("bgMusic");
+
+const musicBtn =
+    document.getElementById("musicBtn");
+
+
+function startMusic(){
+
+    bgMusic.volume = 0.65;
+
+    bgMusic.play()
+        .then(function(){
+
+            musicBtn.textContent = "🎵";
+
+        })
+        .catch(function(){
+
+            musicBtn.textContent = "🔇";
+
+        });
+}
+
+
+function toggleMusic(){
+
+    if(bgMusic.paused){
+
+        bgMusic.volume = 0.65;
+
+        bgMusic.play()
+            .then(function(){
+
+                musicBtn.textContent = "🎵";
+
+            })
+            .catch(function(){
+
+                musicBtn.textContent = "🔇";
+
+            });
+
+    }else{
+
+        bgMusic.pause();
+
+        musicBtn.textContent = "🔇";
+
+    }
+
+}
+
+
+/* PAGE SYSTEM */
+
+function showPage(id){
+
+    document
+        .querySelectorAll(".page")
+        .forEach(function(page){
+
+            page.classList.remove("active");
+
+        });
+
+    document
+        .getElementById(id)
+        .classList.add("active");
+}
+
+
+/* YES */
+
+function goToFlowers(){
+
+    startMusic();
+
+    showPage("page2");
+
+    createFlowers();
+}
+
+
+/* FLOWERS */
+
+function createFlowers(){
+
+    const area =
+        document.getElementById("flowerArea");
+
+    area.innerHTML = "";
+
+    const flowers = [
+        "🌸",
+        "🌹",
+        "🌷",
+        "🌺",
+        "🌻",
+        "🌼",
+        "💐",
+        "💮"
+    ];
+
+    for(let i = 0; i < 70; i++){
+
+        setTimeout(function(){
+
+            const flower =
+                document.createElement("div");
+
+            flower.className = "flower";
+
+            flower.innerHTML =
+                flowers[
+                    Math.floor(
+                        Math.random() * flowers.length
+                    )
+                ];
+
+            flower.style.left =
+                Math.random() * 100 + "%";
+
+            flower.style.fontSize =
+                (22 + Math.random() * 30) + "px";
+
+            flower.style.animationDuration =
+                (3 + Math.random() * 3) + "s";
+
+            area.appendChild(flower);
+
+            setTimeout(function(){
+
+                flower.remove();
+
+            },6500);
+
+        },i * 70);
+
+    }
+}
+
+
+/* PHOTOS */
+
+function goToPhotos(){
+
+    showPage("page3");
+
+}
+
+
+/* NOTE */
+
+function goToNote(){
+
+    showPage("page4");
+
+    createFloating();
+
+}
+
+
+/* FLOATING */
+
+function createFloating(){
+
+    const symbols = [
+        "❤️",
+        "💗",
+        "💕",
+        "🌸",
+        "🌷",
+        "✨",
+        "💐",
+        "♡"
+    ];
+
+    for(let i = 0; i < 45; i++){
+
+        setTimeout(function(){
+
+            const item =
+                document.createElement("div");
+
+            item.className = "floating";
+
+            item.innerHTML =
+                symbols[
+                    Math.floor(
+                        Math.random() * symbols.length
+                    )
+                ];
+
+            item.style.left =
+                Math.random() * 100 + "vw";
+
+            item.style.fontSize =
+                (15 + Math.random() * 25) + "px";
+
+            item.style.animationDuration =
+                (4 + Math.random() * 4) + "s";
+
+            document.body.appendChild(item);
+
+            setTimeout(function(){
+
+                item.remove();
+
+            },8500);
+
+        },i * 100);
+
+    }
+}
+
+
+/* TRY MUSIC AUTOPLAY */
+
+window.addEventListener("load",function(){
+
+    bgMusic.volume = 0.65;
+
+    bgMusic.play()
+        .then(function(){
+
+            musicBtn.textContent = "🎵";
+
+        })
+        .catch(function(){
+
+            /*
+             Mobile browser autoplay blocked.
+             Music will start when YES is clicked.
+            */
+
+            musicBtn.textContent = "🔇";
+
+        });
+
+});
+
+</script>
+
+</body>
+</html>
