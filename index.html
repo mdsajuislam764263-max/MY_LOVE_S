@@ -6,7 +6,7 @@
 
 <title>For Salma ❤️</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 *{
@@ -15,137 +15,258 @@
     box-sizing:border-box;
 }
 
+html,body{
+    width:100%;
+    height:100%;
+}
+
 body{
     min-height:100vh;
     overflow:hidden;
-    font-family:Poppins,sans-serif;
-    background:linear-gradient(135deg,#ff758c,#ff7eb3,#c471ed);
-    background-size:300% 300%;
-    animation:bg 10s ease infinite;
+    font-family:"Poppins",sans-serif;
+
+    background:
+        radial-gradient(circle at 15% 20%,rgba(255,255,255,.25),transparent 28%),
+        radial-gradient(circle at 85% 80%,rgba(255,255,255,.2),transparent 30%),
+        linear-gradient(135deg,#ff758c,#ff7eb3,#c471ed,#8e7dff);
+
+    background-size:200% 200%;
+    animation:bgMove 12s ease infinite;
 }
 
-@keyframes bg{
+@keyframes bgMove{
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
 }
 
+
+/* =========================
+   PAGE SYSTEM
+========================= */
+
 .page{
-    width:100%;
-    height:100vh;
+    position:fixed;
+    inset:0;
+
     display:none;
     align-items:center;
     justify-content:center;
-    padding:25px;
+
+    padding:20px;
+
     text-align:center;
-    position:relative;
 }
 
 .page.active{
     display:flex;
 }
 
+
+/* =========================
+   GLASS CARD
+========================= */
+
 .card{
-    width:min(92%,430px);
-    padding:40px 25px;
-    border-radius:30px;
+    width:min(92vw,440px);
+    max-height:92vh;
+    overflow:auto;
+
+    padding:38px 25px;
+
+    border-radius:32px;
+
     background:rgba(255,255,255,.20);
-    border:1px solid rgba(255,255,255,.4);
-    backdrop-filter:blur(20px);
-    box-shadow:0 25px 70px rgba(50,0,40,.25);
-    animation:show .8s ease;
+    border:1px solid rgba(255,255,255,.45);
+
+    backdrop-filter:blur(25px);
+    -webkit-backdrop-filter:blur(25px);
+
+    box-shadow:
+        0 30px 80px rgba(40,0,40,.30),
+        inset 0 1px 0 rgba(255,255,255,.65);
+
+    animation:cardIn .8s cubic-bezier(.2,.8,.2,1);
 }
 
-@keyframes show{
+.card::-webkit-scrollbar{
+    width:0;
+}
+
+@keyframes cardIn{
     from{
         opacity:0;
-        transform:translateY(35px) scale(.94);
+        transform:translateY(35px) scale(.92);
     }
+
     to{
         opacity:1;
         transform:translateY(0) scale(1);
     }
 }
 
+
+/* =========================
+   FIRST PAGE
+========================= */
+
 .big-heart{
-    font-size:75px;
-    animation:beat 1.5s infinite;
+    width:110px;
+    height:110px;
+
+    margin:0 auto 18px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    font-size:58px;
+
+    background:rgba(255,255,255,.28);
+    border:1px solid rgba(255,255,255,.55);
+
+    box-shadow:
+        0 15px 40px rgba(255,0,80,.2),
+        inset 0 2px 12px rgba(255,255,255,.6);
+
+    animation:heartbeat 1.5s ease-in-out infinite;
 }
 
-@keyframes beat{
-    0%,100%{transform:scale(1)}
-    50%{transform:scale(1.15)}
+@keyframes heartbeat{
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.10);
+    }
+}
+
+.small-title{
+    color:rgba(255,255,255,.8);
+    font-size:11px;
+    letter-spacing:4px;
+    text-transform:uppercase;
 }
 
 h1{
+    margin:10px 0 14px;
+
     font-family:"Great Vibes",cursive;
-    font-size:48px;
+    font-size:52px;
+
     color:white;
-    margin:15px 0;
+
+    text-shadow:
+        0 4px 20px rgba(100,0,50,.2);
 }
 
 .question{
     color:white;
-    font-size:18px;
-    line-height:1.7;
+    font-size:17px;
+    line-height:1.8;
 }
 
 .buttons{
-    margin-top:30px;
     display:flex;
     justify-content:center;
-    gap:15px;
+    gap:14px;
+
+    margin-top:28px;
 }
 
 button{
-    border:none;
+    border:0;
+    outline:0;
+
+    padding:13px 28px;
+
     border-radius:50px;
-    padding:13px 30px;
-    font-family:Poppins,sans-serif;
-    font-size:15px;
+
+    font-family:"Poppins",sans-serif;
+    font-size:14px;
+    font-weight:500;
+
     cursor:pointer;
-    transition:.25s;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
 }
 
 button:hover{
     transform:translateY(-4px) scale(1.04);
 }
 
+button:active{
+    transform:scale(.95);
+}
+
 .yes{
     color:white;
-    background:linear-gradient(135deg,#ff1744,#ff5c8a);
-    box-shadow:0 10px 30px rgba(255,0,80,.35);
+
+    background:
+        linear-gradient(135deg,#ff1744,#ff5c8a);
+
+    box-shadow:
+        0 12px 30px rgba(255,0,80,.40);
 }
 
 .no{
-    background:rgba(255,255,255,.85);
     color:#777;
+    background:rgba(255,255,255,.88);
 }
 
-/* Flower page */
+
+/* =========================
+   FLOWER PAGE
+========================= */
 
 .flower-title{
     color:white;
-    font-size:25px;
-    margin-bottom:20px;
+    font-size:21px;
+    font-weight:500;
+
+    margin-bottom:8px;
+}
+
+.flower-subtitle{
+    color:rgba(255,255,255,.75);
+    font-size:12px;
+
+    margin-bottom:15px;
 }
 
 .flower-area{
-    height:280px;
+    height:300px;
+
     position:relative;
     overflow:hidden;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.08);
 }
 
 .flower{
     position:absolute;
     bottom:-70px;
-    font-size:35px;
-    animation:flowerUp 4s linear forwards;
+
+    animation:flowerUp linear forwards;
+
+    pointer-events:none;
 }
 
 @keyframes flowerUp{
+
     0%{
-        transform:translateY(0) rotate(0deg) scale(.5);
+        transform:
+            translateY(0)
+            rotate(0deg)
+            scale(.4);
+
         opacity:0;
     }
 
@@ -154,152 +275,393 @@ button:hover{
     }
 
     100%{
-        transform:translateY(-360px) rotate(360deg) scale(1.3);
+        transform:
+            translateY(-380px)
+            rotate(360deg)
+            scale(1.25);
+
         opacity:0;
     }
 }
 
+
+/* =========================
+   NEXT BUTTON
+========================= */
+
 .next{
     margin-top:20px;
-    background:white;
+
     color:#d6336c;
+
+    background:white;
+
     font-weight:600;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.15);
 }
 
-/* Photo page */
+
+/* =========================
+   PHOTO PAGE
+========================= */
+
+.photo-title{
+    color:white;
+    font-family:"Great Vibes",cursive;
+    font-size:40px;
+
+    margin-bottom:5px;
+}
+
+.photo-subtitle{
+    color:rgba(255,255,255,.75);
+    font-size:12px;
+    margin-bottom:20px;
+}
 
 .photos{
     display:grid;
     grid-template-columns:1fr 1fr;
+
     gap:12px;
-    margin:20px 0;
 }
 
 .photo{
     width:100%;
-    height:170px;
+    height:175px;
+
     object-fit:cover;
-    border-radius:18px;
+
+    border-radius:20px;
+
     border:3px solid rgba(255,255,255,.7);
-    box-shadow:0 10px 25px rgba(0,0,0,.2);
-    animation:photoIn .7s ease;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.20);
+
+    animation:photoIn .7s ease both;
+}
+
+.photo:nth-child(2){
+    animation-delay:.12s;
+}
+
+.photo:nth-child(3){
+    animation-delay:.24s;
+}
+
+.photo:nth-child(4){
+    animation-delay:.36s;
 }
 
 @keyframes photoIn{
     from{
         opacity:0;
-        transform:scale(.8) rotate(-3deg);
+        transform:scale(.75) rotate(-4deg);
     }
+
     to{
         opacity:1;
         transform:scale(1) rotate(0);
     }
 }
 
-/* Note */
+
+/* =========================
+   NOTE PAGE
+========================= */
 
 .note{
-    background:#fffdf5;
-    color:#49313b;
-    border-radius:8px;
-    padding:30px 25px;
-    text-align:left;
-    box-shadow:0 20px 50px rgba(0,0,0,.25);
     position:relative;
+
+    padding:34px 24px 28px;
+
+    background:
+        linear-gradient(
+            rgba(255,255,255,.95),
+            rgba(255,250,242,.95)
+        );
+
+    border-radius:8px;
+
+    color:#49313b;
+
+    text-align:left;
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.25);
+
     transform:rotate(-1deg);
+
+    overflow:hidden;
 }
 
-.note:before{
+.note::before{
     content:"";
+
     position:absolute;
-    top:0;
+
     left:0;
     right:0;
+    top:0;
+
     height:8px;
-    background:#ff6f91;
-    border-radius:8px 8px 0 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff4d6d,
+            #ff9a9e,
+            #c471ed
+        );
+}
+
+.note::after{
+    content:"";
+
+    position:absolute;
+
+    width:100px;
+    height:100px;
+
+    right:-40px;
+    bottom:-45px;
+
+    border-radius:50%;
+
+    background:rgba(255,120,160,.08);
 }
 
 .note h2{
     text-align:center;
-    color:#d6336c;
+
     font-family:"Great Vibes",cursive;
-    font-size:38px;
-    margin-bottom:18px;
+
+    font-size:42px;
+
+    color:#d6336c;
+
+    margin-bottom:20px;
 }
 
 .note p{
-    font-size:14px;
+    font-family:"Poppins",sans-serif;
+
+    font-size:13.5px;
+
     line-height:2;
+
+    color:#59414c;
 }
 
 .signature{
+    margin-top:22px;
+
     text-align:right;
-    margin-top:20px;
+
     font-family:"Great Vibes",cursive;
-    font-size:28px;
+
+    font-size:30px;
+
     color:#d6336c;
 }
 
+
+/* =========================
+   FLOATING EFFECT
+========================= */
+
 .floating{
     position:fixed;
+
+    bottom:-40px;
+
     pointer-events:none;
-    animation:float 5s linear forwards;
+
+    z-index:999;
+
+    animation:floatUp linear forwards;
 }
 
-@keyframes float{
+@keyframes floatUp{
+
     from{
-        transform:translateY(0) rotate(0);
+        transform:
+            translateY(0)
+            rotate(0deg)
+            scale(.7);
+
+        opacity:0;
+    }
+
+    15%{
         opacity:1;
     }
+
     to{
-        transform:translateY(-110vh) rotate(360deg);
+        transform:
+            translateY(-115vh)
+            rotate(360deg)
+            scale(1.3);
+
         opacity:0;
     }
 }
 
+
+/* =========================
+   MUSIC BUTTON
+========================= */
+
+.music{
+    position:fixed;
+
+    top:18px;
+    right:18px;
+
+    width:44px;
+    height:44px;
+
+    padding:0;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    color:white;
+
+    background:rgba(255,255,255,.20);
+
+    border:1px solid rgba(255,255,255,.4);
+
+    backdrop-filter:blur(10px);
+
+    z-index:9999;
+
+    font-size:18px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
 @media(max-width:480px){
 
+    .card{
+        padding:30px 18px;
+    }
+
     h1{
-        font-size:42px;
+        font-size:45px;
+    }
+
+    .big-heart{
+        width:95px;
+        height:95px;
+        font-size:50px;
+    }
+
+    .flower-area{
+        height:270px;
     }
 
     .photo{
         height:145px;
     }
 
-    .card{
-        padding:32px 20px;
+    .note{
+        padding:32px 20px 25px;
+    }
+
+    .note h2{
+        font-size:38px;
+    }
+
+    .note p{
+        font-size:12.5px;
     }
 }
 </style>
 </head>
 
+
 <body>
 
-<!-- PAGE 1 -->
 
-<section class="page active" id="page1">
+<!-- =========================
+     MUSIC
+========================= -->
+
+<audio
+    id="bgMusic"
+    src="./song.mp3"
+    loop
+    preload="auto">
+</audio>
+
+
+<!-- MUSIC BUTTON -->
+
+<button
+    class="music"
+    id="musicBtn"
+    onclick="toggleMusic()">
+    🔇
+</button>
+
+
+<!-- =========================
+     PAGE 1
+========================= -->
+
+<section
+    class="page active"
+    id="page1">
 
     <div class="card">
 
-        <div class="big-heart">❤️</div>
+        <div class="big-heart">
+            ❤️
+        </div>
 
-        <h1>I Love You Salma</h1>
+        <div class="small-title">
+            A Little Surprise
+        </div>
+
+        <h1>
+            I Love You Salma
+        </h1>
 
         <div class="question">
             তুমি কি আমাকে ভালোবাসো? 🥺❤️
         </div>
 
+
         <div class="buttons">
 
-            <button class="yes" onclick="goToFlowers()">
+            <!-- YES -->
+
+            <button
+                class="yes"
+                onclick="goToFlowers()">
+
                 Yes ❤️
+
             </button>
 
-            <!-- NO BUTTON DOES NOTHING -->
-            <button class="no">
+
+            <!-- NO DOES NOTHING -->
+
+            <button
+                class="no">
+
                 No 🙈
+
             </button>
 
         </div>
@@ -309,20 +671,38 @@ button:hover{
 </section>
 
 
-<!-- PAGE 2 -->
 
-<section class="page" id="page2">
+<!-- =========================
+     PAGE 2
+========================= -->
+
+<section
+    class="page"
+    id="page2">
 
     <div class="card">
 
         <div class="flower-title">
-            🌸 কিছু ফুল শুধু তোমার জন্য 🌸
+            🌸 শুধু তোমার জন্য 🌸
         </div>
 
-        <div class="flower-area" id="flowerArea"></div>
+        <div class="flower-subtitle">
+            কিছু ফুল, কিছু অনুভূতি... ❤️
+        </div>
 
-        <button class="next" onclick="goToPhotos()">
+
+        <div
+            class="flower-area"
+            id="flowerArea">
+        </div>
+
+
+        <button
+            class="next"
+            onclick="goToPhotos()">
+
             Next ➜
+
         </button>
 
     </div>
@@ -330,40 +710,69 @@ button:hover{
 </section>
 
 
-<!-- PAGE 3 -->
 
-<section class="page" id="page3">
+<!-- =========================
+     PAGE 3
+========================= -->
+
+<section
+    class="page"
+    id="page3">
 
     <div class="card">
 
-        <div class="flower-title">
-            📸 কিছু সুন্দর মুহূর্ত
+        <div class="photo-title">
+            Beautiful Memories
         </div>
+
+        <div class="photo-subtitle">
+            তোমার কিছু সুন্দর ছবি ❤️
+        </div>
+
 
         <div class="photos">
 
-            <!-- এখানে নিজের ছবির URL বসাবে -->
 
-            <img class="photo"
-                 src="YOUR_IMAGE_1.jpg"
-                 alt="Salma">
+            <!--
+            ==================================
+            নিজের ছবির লিংক এখানে বসাবে
+            ==================================
+            -->
 
-            <img class="photo"
-                 src="YOUR_IMAGE_2.jpg"
-                 alt="Salma">
 
-            <img class="photo"
-                 src="YOUR_IMAGE_3.jpg"
-                 alt="Salma">
+            <img
+                class="photo"
+                src="./YOUR_IMAGE_1.jpg"
+                alt="Salma">
 
-            <img class="photo"
-                 src="YOUR_IMAGE_4.jpg"
-                 alt="Salma">
+
+            <img
+                class="photo"
+                src="./YOUR_IMAGE_2.jpg"
+                alt="Salma">
+
+
+            <img
+                class="photo"
+                src="./YOUR_IMAGE_3.jpg"
+                alt="Salma">
+
+
+            <img
+                class="photo"
+                src="./YOUR_IMAGE_4.jpg"
+                alt="Salma">
+
 
         </div>
 
-        <button class="next" onclick="goToNote()">
+
+        <button
+            class="next"
+            onclick="goToNote()">
+
             Next ➜
+
         </button>
 
     </div>
@@ -371,42 +780,68 @@ button:hover{
 </section>
 
 
-<!-- PAGE 4 -->
 
-<section class="page" id="page4">
+<!-- =========================
+     PAGE 4
+========================= -->
+
+<section
+    class="page"
+    id="page4">
 
     <div class="card">
 
         <div class="note">
 
-            <h2>For Salma 🌸</h2>
+            <h2>
+                For Salma 🌸
+            </h2>
+
 
             <p>
+
                 প্রিয় সালমা,
+
                 <br><br>
 
-                এই ছোট্ট ওয়েবসাইটটা হয়তো খুব বড় কিছু না,
-                কিন্তু এর প্রতিটা অংশ তোমার জন্য একটু
-                সুন্দর একটা মুহূর্ত তৈরি করার চেষ্টা।
+                এই ছোট্ট ওয়েবসাইটটা হয়তো খুব
+                বড় কোনো উপহার না, কিন্তু এর
+                প্রতিটা অংশ তোমার জন্য একটু
+                সুন্দর একটা মুহূর্ত তৈরি করার
+                ছোট্ট একটা চেষ্টা।
+
                 <br><br>
 
-                জীবনে কিছু মানুষ আসে, যাদের উপস্থিতি
-                সাধারণ একটা দিনকেও একটু বেশি সুন্দর
-                করে তোলে। তোমাকে নিয়ে আমার অনুভূতিটাও
+                জীবনে কিছু মানুষ আসে, যাদের
+                উপস্থিতি সাধারণ একটা দিনকেও
+                একটু বেশি সুন্দর করে তোলে।
+                তোমাকে নিয়ে আমার অনুভূতিটাও
                 ঠিক তেমনই।
+
                 <br><br>
 
-                তোমার হাসি, তোমার কথা আর তোমার ছোট
-                ছোট মুহূর্তগুলো আমার কাছে অনেক
-                মূল্যবান।
+                তোমার হাসি, তোমার কথা আর
+                তোমার ছোট ছোট মুহূর্তগুলো
+                আমার কাছে অনেক মূল্যবান।
+
+                <br><br>
+
+                হয়তো সব কথা মুখে বলা যায় না,
+                তাই এই ছোট্ট পেজটার মাধ্যমে
+                কিছু কথা বলতে চেয়েছি।
+
                 <br><br>
 
                 সবসময় ভালো থেকো, হাসিখুশি থেকো।
                 আর এই ছোট্ট surprise-টা মনে রেখো। ❤️
+
             </p>
 
+
             <div class="signature">
+
                 — তোমার জন্য 💗
+
             </div>
 
         </div>
@@ -416,81 +851,192 @@ button:hover{
 </section>
 
 
+
 <script>
 
-/* PAGE CONTROL */
+/* ==================================
+   MUSIC
+================================== */
 
-function showPage(id){
+const bgMusic =
+    document.getElementById("bgMusic");
 
-    document.querySelectorAll(".page").forEach(page=>{
-        page.classList.remove("active");
-    });
+const musicBtn =
+    document.getElementById("musicBtn");
 
-    document.getElementById(id).classList.add("active");
+let musicStarted = false;
+
+
+/* Start music */
+
+function startMusic(){
+
+    if(musicStarted){
+        return;
+    }
+
+    bgMusic.volume = 0.65;
+
+    bgMusic.play()
+        .then(()=>{
+            musicStarted = true;
+            musicBtn.textContent = "🎵";
+        })
+        .catch(()=>{
+            musicBtn.textContent = "🔇";
+        });
+
 }
 
 
-/* YES BUTTON */
+/* Music button */
 
-function goToFlowers(){
+function toggleMusic(){
 
-    showPage("page2");
+    if(bgMusic.paused){
 
-    createFlowers();
+        bgMusic.play()
+            .then(()=>{
+                musicStarted = true;
+                musicBtn.textContent = "🎵";
+            });
 
-}
+    }else{
 
+        bgMusic.pause();
 
-/* FLOWERS */
-
-function createFlowers(){
-
-    const area=document.getElementById("flowerArea");
-
-    const flowers=[
-        "🌸",
-        "🌹",
-        "🌷",
-        "🌺",
-        "💐",
-        "🌻",
-        "🌼"
-    ];
-
-    for(let i=0;i<55;i++){
-
-        setTimeout(()=>{
-
-            const flower=document.createElement("div");
-
-            flower.className="flower";
-
-            flower.innerHTML=
-                flowers[Math.floor(Math.random()*flowers.length)];
-
-            flower.style.left=
-                Math.random()*100+"%";
-
-            flower.style.fontSize=
-                (25+Math.random()*30)+"px";
-
-            flower.style.animationDuration=
-                (3+Math.random()*3)+"s";
-
-            area.appendChild(flower);
-
-            setTimeout(()=>{
-                flower.remove();
-            },6000);
-
-        },i*90);
+        musicBtn.textContent = "🔇";
 
     }
 
 }
 
 
-/* PHOTOS */
+
+/* ==================================
+   PAGE SYSTEM
+================================== */
+
+function showPage(id){
+
+    document
+        .querySelectorAll(".page")
+        .forEach(page=>{
+            page.classList.remove("active");
+        });
+
+
+    document
+        .getElementById(id)
+        .classList.add("active");
+
+}
+
+
+
+/* ==================================
+   YES BUTTON
+================================== */
+
+function goToFlowers(){
+
+    /* Start song after user interaction */
+
+    startMusic();
+
+
+    /* Open flower page */
+
+    showPage("page2");
+
+
+    /* Start flowers */
+
+    createFlowers();
+
+}
+
+
+
+/* ==================================
+   FLOWERS
+================================== */
+
+function createFlowers(){
+
+    const area =
+        document.getElementById("flowerArea");
+
+
+    const flowers = [
+
+        "🌸",
+        "🌹",
+        "🌷",
+        "🌺",
+        "🌻",
+        "🌼",
+        "💐",
+        "🌸",
+        "🌷"
+
+    ];
+
+
+    /* Big burst */
+
+    for(let i=0;i<70;i++){
+
+        setTimeout(()=>{
+
+            const flower =
+                document.createElement("div");
+
+
+            flower.className =
+                "flower";
+
+
+            flower.innerHTML =
+                flowers[
+                    Math.floor(
+                        Math.random()
+                        * flowers.length
+                    )
+                ];
+
+
+            flower.style.left =
+                Math.random()*100+"%";
+
+
+            flower.style.fontSize =
+                (22+Math.random()*30)+"px";
+
+
+            flower.style.animationDuration =
+                (3+Math.random()*3)+"s";
+
+
+            area.appendChild(flower);
+
+
+            setTimeout(()=>{
+                flower.remove();
+            },6500);
+
+
+        },i*70);
+
+    }
+
+}
+
+
+
+/* ==================================
+   PHOTO PAGE
+================================== */
 
 function goToPhotos(){
 
@@ -499,63 +1045,122 @@ function goToPhotos(){
 }
 
 
-/* NOTE */
+
+/* ==================================
+   NOTE PAGE
+================================== */
 
 function goToNote(){
 
     showPage("page4");
+
+
+    /* Extra floating flowers/hearts */
 
     createFloating();
 
 }
 
 
-/* EXTRA FLOATING EFFECT */
+
+/* ==================================
+   FLOATING EFFECT
+================================== */
 
 function createFloating(){
 
-    const symbols=[
+    const symbols = [
+
         "❤️",
         "💗",
-        "🌸",
-        "✨",
         "💕",
-        "🌷"
+        "🌸",
+        "🌷",
+        "✨",
+        "💐",
+        "♡"
+
     ];
 
-    for(let i=0;i<35;i++){
+
+    for(let i=0;i<45;i++){
 
         setTimeout(()=>{
 
-            const item=document.createElement("div");
+            const item =
+                document.createElement("div");
 
-            item.className="floating";
 
-            item.innerHTML=
-                symbols[Math.floor(Math.random()*symbols.length)];
+            item.className =
+                "floating";
 
-            item.style.left=
+
+            item.innerHTML =
+                symbols[
+                    Math.floor(
+                        Math.random()
+                        * symbols.length
+                    )
+                ];
+
+
+            item.style.left =
                 Math.random()*100+"vw";
 
-            item.style.bottom="-30px";
 
-            item.style.fontSize=
+            item.style.fontSize =
                 (15+Math.random()*25)+"px";
 
-            item.style.animationDuration=
+
+            item.style.animationDuration =
                 (4+Math.random()*4)+"s";
+
 
             document.body.appendChild(item);
 
+
             setTimeout(()=>{
                 item.remove();
-            },8000);
+            },8500);
+
 
         },i*100);
 
     }
 
 }
+
+
+
+/* ==================================
+   TRY AUTOPLAY ON PAGE LOAD
+==================================
+
+   Mobile browsers may block this.
+   If blocked, YES button will start it.
+================================== */
+
+window.addEventListener("load",()=>{
+
+    bgMusic.volume = 0.65;
+
+    bgMusic.play()
+        .then(()=>{
+
+            musicStarted = true;
+
+            musicBtn.textContent = "🎵";
+
+        })
+        .catch(()=>{
+
+            /* Browser blocked autoplay */
+
+            musicBtn.textContent = "🔇";
+
+        });
+
+});
 
 </script>
 
