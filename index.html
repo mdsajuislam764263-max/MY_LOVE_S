@@ -2,39 +2,21 @@
 <html lang="bn">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For Salma 💗</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>FOR MY LOVE SALMU💝</title>
 
 <style>
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
+*{box-sizing:border-box;margin:0;padding:0}
 
 body{
   min-height:100vh;
   overflow:hidden;
   font-family:Arial,"Noto Sans Bengali",sans-serif;
+  color:#54283f;
   background:
-    radial-gradient(circle at 20% 20%,#ffd6e7,transparent 35%),
-    radial-gradient(circle at 80% 80%,#d9d7ff,transparent 35%),
-    linear-gradient(135deg,#fff0f6,#f2eaff,#e8f7ff);
-  color:#4b2840;
-}
-
-body::before{
-  content:"";
-  position:fixed;
-  inset:0;
-  background:linear-gradient(120deg,transparent,rgba(255,255,255,.45),transparent);
-  animation:shine 6s infinite;
-  pointer-events:none;
-}
-
-@keyframes shine{
-  0%{transform:translateX(-100%)}
-  100%{transform:translateX(100%)}
+    radial-gradient(circle at 15% 20%,#ffd5e5,transparent 35%),
+    radial-gradient(circle at 85% 80%,#d9d4ff,transparent 35%),
+    linear-gradient(135deg,#fff0f6,#eee9ff,#e9faff);
 }
 
 .page{
@@ -43,8 +25,8 @@ body::before{
   display:none;
   align-items:center;
   justify-content:center;
-  padding:20px;
-  z-index:2;
+  padding:18px;
+  z-index:5;
 }
 
 .page.active{
@@ -53,177 +35,128 @@ body::before{
 }
 
 @keyframes pageIn{
-  from{opacity:0;transform:scale(.94) translateY(20px)}
+  from{opacity:0;transform:scale(.92) translateY(20px)}
   to{opacity:1;transform:scale(1) translateY(0)}
 }
 
 .card{
-  width:min(94vw,520px);
-  max-height:90vh;
+  width:min(94vw,540px);
+  max-height:92vh;
   overflow:auto;
-  padding:30px 22px;
   text-align:center;
-  border:1px solid rgba(255,255,255,.7);
+  padding:28px 20px;
   border-radius:32px;
-  background:rgba(255,255,255,.55);
-  backdrop-filter:blur(18px);
-  box-shadow:
-    0 25px 70px rgba(92,40,75,.20),
-    inset 0 1px 0 white;
+  background:rgba(255,255,255,.58);
+  backdrop-filter:blur(20px);
+  border:1px solid rgba(255,255,255,.8);
+  box-shadow:0 25px 80px rgba(90,35,75,.2);
 }
 
 h1{
-  font-size:clamp(27px,7vw,42px);
+  font-size:clamp(28px,8vw,45px);
   margin-bottom:12px;
 }
 
 h2{
+  font-size:26px;
   margin-bottom:12px;
 }
 
 .subtitle{
+  line-height:1.8;
   font-size:17px;
-  line-height:1.7;
   margin:12px 0 22px;
 }
 
 .cat{
-  font-size:80px;
-  animation:catFloat 2.5s ease-in-out infinite;
-  filter:drop-shadow(0 10px 10px rgba(0,0,0,.12));
+  font-size:72px;
+  animation:catFloat 2.5s infinite ease-in-out;
 }
 
 @keyframes catFloat{
-  50%{transform:translateY(-10px) rotate(2deg)}
+  50%{transform:translateY(-10px) rotate(3deg)}
 }
 
 .speech{
   display:inline-block;
-  margin:10px auto 20px;
-  padding:12px 18px;
   background:white;
+  padding:11px 17px;
   border-radius:20px;
-  box-shadow:0 8px 25px rgba(0,0,0,.08);
-  font-size:15px;
+  margin:8px 0 16px;
+  box-shadow:0 8px 25px #00000012;
 }
 
 .buttons{
   display:flex;
   justify-content:center;
   gap:14px;
-  margin-top:22px;
   min-height:55px;
+  margin-top:20px;
 }
 
 button{
   border:0;
   border-radius:999px;
   padding:14px 25px;
-  font-size:16px;
   font-weight:bold;
+  font-size:16px;
   cursor:pointer;
-  transition:.25s;
-  box-shadow:0 8px 20px rgba(0,0,0,.12);
+  box-shadow:0 8px 20px #00000018;
 }
 
 .yes{
-  background:linear-gradient(135deg,#ff5d91,#ff8db3);
   color:white;
+  background:linear-gradient(135deg,#ff4f8b,#ff8fb6);
 }
 
-.yes:hover{
-  transform:translateY(-3px) scale(1.04);
+.next{
+  color:white;
+  background:linear-gradient(135deg,#7048ff,#a05cff);
+  margin-top:20px;
 }
 
 .no{
   background:white;
   color:#9b5474;
-  position:relative;
 }
 
-.next{
-  margin-top:20px;
-  background:#6d4aff;
-  color:white;
-}
-
-/* ফুল */
-.flower{
-  position:fixed;
-  top:-80px;
-  z-index:20;
-  pointer-events:none;
-  animation:fall linear forwards;
-}
-
-@keyframes fall{
-  0%{
-    transform:translateY(-80px) rotate(0deg);
-    opacity:0;
-  }
-  10%{opacity:1}
-  100%{
-    transform:translateY(110vh) rotate(720deg);
-    opacity:.9;
-  }
-}
-
-/* hearts */
-.heart{
-  position:fixed;
-  bottom:-40px;
-  pointer-events:none;
-  z-index:1;
-  animation:heartUp linear forwards;
-}
-
-@keyframes heartUp{
-  to{
-    transform:translateY(-110vh) translateX(var(--move)) rotate(25deg);
-    opacity:0;
-  }
-}
-
-/* progress */
 .progress{
   display:flex;
   justify-content:center;
-  gap:7px;
-  margin-bottom:20px;
+  gap:6px;
+  margin-bottom:15px;
 }
 
 .dot{
   width:9px;
   height:9px;
+  background:#d8bfd0;
   border-radius:50%;
-  background:#d9bfd0;
 }
 
 .dot.active{
   width:25px;
-  border-radius:20px;
-  background:#ff6598;
-}
-
-/* questions */
-.question-number{
-  font-size:13px;
-  color:#a06080;
-  margin-bottom:8px;
+  background:#ff6497;
 }
 
 .question{
-  font-size:23px;
-  line-height:1.5;
+  font-size:22px;
   font-weight:bold;
+  line-height:1.5;
 }
 
-/* gallery */
+.question-number{
+  font-size:13px;
+  margin-bottom:8px;
+  color:#9b5d7c;
+}
+
+/* GALLERY */
+
 .gallery{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:12px;
-  margin-top:18px;
 }
 
 .gallery img{
@@ -232,38 +165,22 @@ button{
   object-fit:cover;
   border-radius:20px;
   border:3px solid white;
-  box-shadow:0 8px 20px rgba(0,0,0,.12);
-  transition:.3s;
+  box-shadow:0 8px 20px #0002;
 }
 
-.gallery img:hover{
-  transform:scale(1.03) rotate(1deg);
-}
+/* NOTE */
 
-/* note */
 .note{
   text-align:left;
   background:#fffdf5;
   padding:25px;
   border-radius:8px;
-  box-shadow:0 15px 35px rgba(0,0,0,.15);
-  position:relative;
   line-height:1.9;
-  font-size:16px;
-}
-
-.note::before{
-  content:"";
-  position:absolute;
-  left:18px;
-  top:0;
-  bottom:0;
-  width:2px;
-  background:#ffc5d9;
+  box-shadow:0 15px 35px #0002;
 }
 
 .note-content{
-  padding-left:15px;
+  padding-left:12px;
 }
 
 .signature{
@@ -272,483 +189,917 @@ button{
   font-weight:bold;
 }
 
-/* videos */
-.videos{
-  display:flex;
-  flex-direction:column;
-  gap:18px;
-  margin-top:18px;
+/* BIG LOVE */
+
+.bigLove{
+  font-size:100px;
+  animation:bigHeart 1.2s infinite;
+  filter:drop-shadow(0 15px 20px #ff4c8b55);
 }
 
-.video-box{
-  background:rgba(255,255,255,.7);
-  padding:10px;
-  border-radius:22px;
+@keyframes bigHeart{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.2)}
 }
 
-.video-box video{
-  width:100%;
-  border-radius:16px;
-  display:block;
+.loveText{
+  font-size:42px;
+  font-weight:900;
+  background:linear-gradient(90deg,#ff3e83,#9b5cff,#ff3e83);
+  background-size:200%;
+  -webkit-background-clip:text;
+  color:transparent;
+  animation:textGlow 2s infinite linear;
 }
+
+@keyframes textGlow{
+  to{background-position:200%}
+}
+
+/* EMOJI */
+
+.emojiBox{
+  font-size:45px;
+  line-height:1.7;
+  animation:emojiFloat 2s infinite alternate;
+}
+
+@keyframes emojiFloat{
+  from{transform:translateY(5px)}
+  to{transform:translateY(-8px)}
+}
+
+/* BALLOONS */
+
+.balloon{
+  position:fixed;
+  bottom:-100px;
+  font-size:50px;
+  z-index:1;
+  animation:balloonUp linear forwards;
+}
+
+@keyframes balloonUp{
+  to{
+    transform:translateY(-120vh) translateX(var(--x));
+  }
+}
+
+/* CONFETTI */
+
+.confetti{
+  position:fixed;
+  top:-20px;
+  width:9px;
+  height:15px;
+  z-index:50;
+  animation:confettiFall linear forwards;
+}
+
+@keyframes confettiFall{
+  to{
+    transform:translateY(110vh) rotate(720deg);
+  }
+}
+
+/* FIREWORKS */
+
+#fireworks{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:1;
+}
+
+.spark{
+  position:absolute;
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:white;
+  animation:explode 1.4s ease-out forwards;
+  box-shadow:0 0 12px white;
+}
+
+@keyframes explode{
+  0%{
+    transform:translate(0,0) scale(1);
+    opacity:1;
+  }
+  100%{
+    transform:translate(var(--x),var(--y)) scale(.2);
+    opacity:0;
+  }
+}
+
+/* FLOATING */
+
+.float{
+  position:fixed;
+  bottom:-50px;
+  pointer-events:none;
+  z-index:2;
+  animation:floatUp linear forwards;
+}
+
+@keyframes floatUp{
+  to{
+    transform:translateY(-115vh) translateX(var(--move)) rotate(25deg);
+    opacity:0;
+  }
+}
+
+/* MUSIC */
 
 .music{
   position:fixed;
-  right:15px;
-  bottom:15px;
+  right:14px;
+  bottom:14px;
   z-index:100;
   width:48px;
   height:48px;
   padding:0;
-  border-radius:50%;
   background:white;
   font-size:20px;
 }
 
-.tiny{
+.small{
   font-size:12px;
   opacity:.65;
-  margin-top:12px;
-}
-
-@media(max-width:420px){
-  .card{padding:25px 16px}
-  .cat{font-size:65px}
-  .question{font-size:20px}
+  margin-top:13px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- PAGE 1 -->
+<div id="fireworks"></div>
+
+<!-- 1 -->
 <section class="page active" id="page1">
-  <div class="card">
-    <div class="cat">🐱🎀</div>
+<div class="card">
 
-    <div class="speech">
-      🐾 একটা ছোট্ট প্রশ্ন আছে...
-    </div>
+<div class="cat">🫶🏻🎀</div>
 
-    <h1>সালমা 💗</h1>
+<div class="speech">🐾 একটা ছোট্ট প্রশ্ন...</div>
 
-    <p class="subtitle">
-      তুমি কি <b>Saju</b>-কে সত্যি সত্যি ভালোবাসো? 🥺🌸
-    </p>
+<h1>সালমা 💗</h1>
 
-    <div class="buttons">
-      <button class="yes" onclick="answerYes(2)">
-        হ্যাঁ 💖
-      </button>
+<p class="subtitle">
+তুমি কি <b>Saju</b>-কে সত্যি সত্যি ভালোবাসো? 🥺🌸
+</p>
 
-      <button class="no" id="no1" onmouseover="moveNo(this)" ontouchstart="moveNo(this)">
-        না 🙈
-      </button>
-    </div>
+<div class="buttons">
+<button class="yes" onclick="startQuestions()">হ্যাঁ 💖</button>
 
-    <p class="tiny">একটা ছোট্ট surprise অপেক্ষা করছে... 🎁</p>
-  </div>
+<button class="no"
+onmouseover="moveNo(this)"
+ontouchstart="moveNo(this)">
+না 🙈
+</button>
+</div>
+
+<p class="small">একটা ছোট্ট surprise অপেক্ষা করছে 🎁</p>
+
+</div>
 </section>
 
 
-<!-- PAGE 2 QUESTIONS -->
+<!-- 2 -->
 <section class="page" id="page2">
-  <div class="card">
+<div class="card">
 
-    <div class="progress">
-      <span class="dot active"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-    </div>
+<div class="progress">
+<span class="dot active"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+</div>
 
-    <div class="cat">🐱💗</div>
+<div class="cat">💝💗</div>
 
-    <div class="question-number" id="qNumber">
-      প্রশ্ন ১ / ৩
-    </div>
+<div class="question-number" id="qNumber">
+প্রশ্ন ১ / ৩
+</div>
 
-    <div class="question" id="questionText">
-      তুমি কি সত্যি Saju-কে ভালোবাসো? 💕
-    </div>
+<div class="question" id="questionText">
+তুমি কি সত্যি Saju-কে ভালোবাসো? 💕
+</div>
 
-    <div class="buttons">
-      <button class="yes" onclick="nextQuestion()">
-        হ্যাঁ 💖
-      </button>
+<div class="buttons">
 
-      <button class="no" id="questionNo"
-        onmouseover="moveNo(this)"
-        ontouchstart="moveNo(this)">
-        না 🙈
-      </button>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- PAGE 3 FLOWERS -->
-<section class="page" id="page3">
-  <div class="card">
-    <div class="cat">🐱🌸</div>
-
-    <h1>একটু অপেক্ষা... 🌷</h1>
-
-    <p class="subtitle">
-      তোমার জন্য ছোট্ট একটা ফুলের surprise তৈরি হচ্ছে... 💐
-    </p>
-
-    <button class="next" onclick="goPage(4)">
-      ফুলগুলো দেখেছি 🌸 → Next
-    </button>
-  </div>
-</section>
-
-
-<!-- PAGE 4 PHOTOS -->
-<section class="page" id="page4">
-  <div class="card">
-
-    <div class="cat">🐱📸</div>
-
-    <h2>কিছু সুন্দর স্মৃতি 💗</h2>
-
-    <p class="subtitle">
-      এই ছবিগুলো surprise-এর ছোট্ট একটা অংশ... 🌸
-    </p>
-
-    <div class="gallery">
-      <img src="./salma1.jpg" alt="Salma 1">
-      <img src="./salma2.jpg" alt="Salma 2">
-      <img src="./salma3.jpg" alt="Salma 3">
-      <img src="./salma4.jpg" alt="Salma 4">
-    </div>
-
-    <button class="next" onclick="goPage(5)">
-      একটা চিঠি আছে 💌 → Next
-    </button>
-
-  </div>
-</section>
-
-
-<!-- PAGE 5 NOTE -->
-<section class="page" id="page5">
-  <div class="card">
-
-    <div class="cat">🐱💌</div>
-
-    <h2>একটা ছোট্ট চিঠি 💗</h2>
-
-    <div class="note">
-      <div class="note-content">
-
-        <b>প্রিয় সালমা, 🫶🏻💝</b>
-
-        <br><br>
-
-        এই ছোট্ট ওয়েবসাইটটা হয়তো খুব বড় কোনো উপহার না,
-        কিন্তু এর প্রতিটা অংশ তোমার জন্য একটা সুন্দর মুহূর্ত
-        তৈরি করার ছোট্ট একটা চেষ্টা। 🌸
-
-        <br><br>
-
-        জীবনে কিছু মানুষ আসে, যাদের উপস্থিতি
-        সাধারণ একটা দিনকেও একটু বেশি সুন্দর করে তোলে। 💗
-
-        <br><br>
-
-        এই surprise-টা তোমার জন্যই বানানো। 🌷
-
-        <br><br>
-
-        <b>ভালো থেকো, হাসিখুশি থেকো। ❤️‍🩹</b>
-
-        <div class="signature">
-          — Saju 💗
-        </div>
-
-      </div>
-    </div>
-
-    <button class="next" onclick="goPage(6)">
-      শেষ surprise দেখবে? 🎁
-    </button>
-
-  </div>
-</section>
-
-
-<!-- PAGE 6 VIDEO -->
-<section class="page" id="page6">
-  <div class="card">
-
-    <div class="cat">🐱🎬💗</div>
-
-    <h2>শেষ surprise 🎁</h2>
-
-    <p class="subtitle">
-      তোমার জন্য বানানো ছোট্ট Love Video 💕
-    </p>
-
-    <div class="videos">
-
-      <div class="video-box">
-        <video controls playsinline preload="metadata">
-          <source src="./love1.mp4" type="video/mp4">
-          তোমার browser video support করে না।
-        </video>
-      </div>
-
-      <div class="video-box">
-        <video controls playsinline preload="metadata">
-          <source src="./love2.mp4" type="video/mp4">
-          তোমার browser video support করে না।
-        </video>
-      </div>
-
-    </div>
-
-    <p class="tiny">
-      প্রতিটি ভিডিও প্রায় ৯ সেকেন্ডের হলে surpriseটা আরও সুন্দর হবে। 🌸
-    </p>
-
-  </div>
-</section>
-
-
-<!-- MUSIC -->
-<button class="music" id="musicBtn" onclick="toggleMusic()">
-  🎵
+<button class="yes" onclick="nextQuestion()">
+হ্যাঁ 💖
 </button>
 
-<audio id="bgMusic" src="./song.mp3" loop preload="auto"></audio>
+<button class="no"
+onmouseover="moveNo(this)"
+ontouchstart="moveNo(this)">
+না 🙈
+</button>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- 3 FLOWER -->
+<section class="page" id="page3">
+<div class="card">
+
+<div class="cat">🥰🌸</div>
+
+<h1>ফুল শুধু তোমার জন্য 🌷</h1>
+
+<p class="subtitle">
+চারপাশটা একটু ফুলে ভরে যাক... 💐
+</p>
+
+<button class="next" onclick="goPage(4)">
+Next 🌸 →
+</button>
+
+</div>
+</section>
+
+
+<!-- 4 PHOTO -->
+<section class="page" id="page4">
+<div class="card">
+
+<div class="cat">😘📸</div>
+
+<h2>কিছু সুন্দর স্মৃতি 💗</h2>
+
+<div class="gallery">
+
+<img src="./salma1.jpg">
+<img src="./salma2.jpg">
+<img src="./salma3.jpg">
+<img src="./salma4.jpg">
+
+</div>
+
+<button class="next" onclick="goPage(5)">
+আরেকটা surprise 💌 →
+</button>
+
+</div>
+</section>
+
+
+<!-- 5 NOTE -->
+<section class="page" id="page5">
+<div class="card">
+
+<div class="cat">💝💌</div>
+
+<h2>একটা ছোট্ট চিঠি 💝</h2>
+
+<div class="note">
+
+<div class="note-content">
+
+<b>প্রিয় সালমা, 🫶🏻💝</b>
+
+<br><br>
+
+এই ছোট্ট ওয়েবসাইটটা হয়তো খুব বড় কোনো উপহার না,
+কিন্তু এর প্রতিটা অংশ তোমার জন্য একটা সুন্দর মুহূর্ত
+তৈরি করার ছোট্ট একটা চেষ্টা। 🌸
+
+<br><br>
+
+জীবনে কিছু মানুষ আসে,
+যাদের উপস্থিতি সাধারণ একটা দিনকেও
+আরও সুন্দর করে তোলে। 💗
+
+<br><br>
+
+এই surprise-টা তোমার জন্যই বানানো। 🌷
+
+<div class="signature">
+— YOUR_SAJU🫶🏻💝
+</div>
+
+</div>
+</div>
+
+<button class="next" onclick="goPage(6)">
+Love Surprise 💖 →
+</button>
+
+</div>
+</section>
+
+
+<!-- 6 LOVE SURPRISE -->
+<section class="page" id="page6">
+<div class="card">
+
+<div class="bigLove">💖</div>
+
+<div class="loveText">
+I LOVE YOU
+</div>
+
+<p class="subtitle">
+এই মুহূর্তটা শুধু একটা সুন্দর স্মৃতি হয়ে থাকুক। 🫶🏻🌸
+</p>
+
+<button class="next" onclick="celebration()">
+Big Celebration 🎉 →
+</button>
+
+</div>
+</section>
+
+
+<!-- 7 CELEBRATION -->
+<section class="page" id="page7">
+<div class="card">
+
+<div class="cat">🥀🎉</div>
+
+<h1>BIG CELEBRATION 🎊</h1>
+
+<p class="subtitle">
+আজকে শুধু আনন্দ আর ভালোবাসার celebration! 💝
+</p>
+
+<div class="emojiBox">
+🎈 🎉 💖 🎊 🌸 🥳 💕 🎈
+</div>
+
+<button class="next" onclick="goPage(8)">
+Love Emoji Surprise 💕 →
+</button>
+
+</div>
+</section>
+
+
+<!-- 8 EMOJI -->
+<section class="page" id="page8">
+<div class="card">
+
+<div class="cat">🥰💞</div>
+
+<h1>LOVE EMOJI SURPRISE</h1>
+
+<div class="emojiBox">
+❤️ 💗 💕 💖 💝<br>
+🫶🏻 🌸 🥰 🌷 💐<br>
+💞 💓 💘 💌 ✨
+</div>
+
+<p class="subtitle">
+এক পৃথিবী ভালোবাসা তোমার জন্য। 💝
+</p>
+
+<button class="next" onclick="goPage(9)">
+আরেকটা Love Note 💌 →
+</button>
+
+</div>
+</section>
+
+
+<!-- 9 SECOND NOTE -->
+<section class="page" id="page9">
+<div class="card">
+
+<div class="cat">🫶🏻💝</div>
+
+<h2>আরেকটা কথা... 🫶🏻</h2>
+
+<div class="note">
+
+<div class="note-content">
+
+<b>সালমা, 💝</b>
+
+<br><br>
+
+কখনো কখনো অনেক কথা মুখে বলা যায় না।
+তাই এই ছোট্ট website-এর মাধ্যমে
+একটু সুন্দর করে বলা। 🌸
+
+<br><br>
+
+তোমার হাসিটা সুন্দর,
+তোমার ভালো থাকা আরও সুন্দর। 💗
+
+<br><br>
+
+যতদিন এই website-টা মনে থাকবে,
+ততদিন এই ছোট্ট surprise-টার কথাটাও
+মনে থাকবে। 🫶🏻
+
+<br><br>
+
+<b>Stay happy & keep smiling. 🌷</b>
+
+<div class="signature">
+— YOUR SAJU💝
+</div>
+
+</div>
+</div>
+
+<button class="next" onclick="startFireworks()">
+আকাশের surprise 🎆 →
+</button>
+
+</div>
+</section>
+
+
+<!-- 10 FIREWORK -->
+<section class="page" id="page10">
+<div class="card">
+
+<div class="bigLove">🎆</div>
+
+<div class="loveText">
+LOVE
+</div>
+
+<h2>আকাশটাও আজ সুন্দর ✨</h2>
+
+<p class="subtitle">
+একটা ছোট্ট fireworks surprise শুধু তোমার জন্য। 💝
+</p>
+
+<button class="next" onclick="goPage(11)">
+Special Message 🫶🏻 →
+</button>
+
+</div>
+</section>
+
+
+<!-- 11 FINAL -->
+<section class="page" id="page11">
+<div class="card">
+
+<div class="cat">💝🫶🏻</div>
+
+<h1>Special For You 💝</h1>
+
+<div class="bigLove">💗</div>
+
+<p class="subtitle">
+
+কিছু surprise শব্দে শেষ হয় না... 🌸
+
+<br><br>
+
+এই পুরো website-এর প্রতিটা page,
+প্রতিটা ফুল,
+প্রতিটা heart,
+আর প্রতিটা ছোট্ট animation
+একটা সুন্দর স্মৃতি তৈরি করার জন্য। 💕
+
+<br><br>
+
+<b>
+I Love U SALMÚ 🥰,
+FOR MY LOVE 🫶🏻,
+MY LIFE 🫶🏻💝🫶🏻
+</b>
+
+<br><br>
+
+🌸 💝 ❤️‍🩹 🌷 💗
+
+</p>
+
+<div class="loveText">
+FOR SALMU
+</div>
+
+<p class="small">
+The End... but the memory stays forever 💝
+</p>
+
+</div>
+</section>
+
+
+<button class="music" onclick="toggleMusic()" id="musicBtn">
+🎵
+</button>
+
+<audio id="bgMusic" src="./song.mp3" loop></audio>
 
 
 <script>
 
-let currentPage = 1;
+let qIndex=0;
 
-const questions = [
-  "তুমি কি সত্যি Saju-কে ভালোবাসো? 💕",
-  "Saju-এর সাথে সুন্দর সুন্দর মুহূর্ত কাটাতে চাও? 🌸",
-  "এই ছোট্ট surprise-টা accept করবে? 🎁💖"
+const questions=[
+"তুমি কি সত্যি Saju-কে ভালোবাসো? 💕",
+"সারাজীবন'আমার হয়ে_থাকবে'তো🥺🫶🏻",
+"এই ছোট্ট surprise-টা accept করবে? 🎁💖"
 ];
 
-let qIndex = 0;
-
-const music = document.getElementById("bgMusic");
-const musicBtn = document.getElementById("musicBtn");
+const music=document.getElementById("bgMusic");
 
 
-/* PAGE CHANGE */
-function goPage(number){
+/* PAGE */
 
-  document.querySelectorAll(".page").forEach(p=>{
-    p.classList.remove("active");
-  });
+function goPage(n){
 
-  const page = document.getElementById("page"+number);
+document.querySelectorAll(".page")
+.forEach(p=>p.classList.remove("active"));
 
-  if(page){
-    page.classList.add("active");
-    currentPage = number;
-  }
+document.getElementById("page"+n)
+.classList.add("active");
 
 }
 
 
-/* YES */
-function answerYes(page){
+/* START */
 
-  startMusic();
+function startQuestions(){
 
-  if(page === 2){
+startMusic();
 
-    qIndex = 0;
+qIndex=0;
 
-    document.getElementById("questionText").textContent =
-      questions[qIndex];
+document.getElementById("questionText")
+.textContent=questions[0];
 
-    document.getElementById("qNumber").textContent =
-      "প্রশ্ন ১ / ৩";
+document.getElementById("qNumber")
+.textContent="প্রশ্ন ১ / ৩";
 
-    goPage(2);
-
-  }
+goPage(2);
 
 }
 
 
 /* QUESTIONS */
+
 function nextQuestion(){
 
-  startMusic();
+startMusic();
 
-  qIndex++;
+qIndex++;
 
-  if(qIndex >= questions.length){
+if(qIndex>=questions.length){
 
-    flowerStorm(70);
+flowerStorm(100);
 
-    setTimeout(()=>{
-      goPage(3);
-    },1200);
+setTimeout(()=>{
+goPage(3);
+},1000);
 
-    return;
-  }
+return;
 
-  document.getElementById("questionText").textContent =
-    questions[qIndex];
+}
 
-  document.getElementById("qNumber").textContent =
-    "প্রশ্ন " + (qIndex+1) + " / ৩";
+document.getElementById("questionText")
+.textContent=questions[qIndex];
+
+document.getElementById("qNumber")
+.textContent=
+"প্রশ্ন "+(qIndex+1)+" / ৩";
 
 }
 
 
-/* NO BUTTON MOVE */
-function moveNo(button){
+/* NO MOVE */
 
-  const parent = button.parentElement;
+function moveNo(btn){
 
-  const rect = parent.getBoundingClientRect();
+const parent=btn.parentElement;
 
-  const maxX = Math.max(0, rect.width - button.offsetWidth);
-  const maxY = 30;
+const maxX=Math.max(
+40,
+parent.clientWidth-btn.offsetWidth
+);
 
-  const x = Math.random() * maxX - maxX/2;
-  const y = (Math.random() * maxY) - maxY/2;
+const x=(Math.random()*maxX)-(maxX/2);
 
-  button.style.transform =
-    `translate(${x}px,${y}px)`;
+const y=(Math.random()*50)-25;
+
+btn.style.transform=
+`translate(${x}px,${y}px)`;
 
 }
 
 
 /* FLOWERS */
+
 function flowerStorm(amount){
 
-  const flowers = [
-    "🌸","🌷","🌹","🌺","💐","🌼","🪻","🌻"
-  ];
+const flowers=[
+"🌸","🌷","🌹","🌺",
+"💐","🌼","🪻","🌻"
+];
 
-  for(let i=0;i<amount;i++){
+for(let i=0;i<amount;i++){
 
-    setTimeout(()=>{
+setTimeout(()=>{
 
-      const flower = document.createElement("div");
+const f=document.createElement("div");
 
-      flower.className = "flower";
+f.className="float";
 
-      flower.textContent =
-        flowers[Math.floor(Math.random()*flowers.length)];
+f.textContent=
+flowers[Math.floor(Math.random()*flowers.length)];
 
-      flower.style.left =
-        Math.random()*100 + "vw";
+f.style.left=Math.random()*100+"vw";
 
-      flower.style.fontSize =
-        (18 + Math.random()*28) + "px";
+f.style.fontSize=
+(20+Math.random()*28)+"px";
 
-      flower.style.animationDuration =
-        (3 + Math.random()*4) + "s";
+f.style.animationDuration=
+(3+Math.random()*5)+"s";
 
-      document.body.appendChild(flower);
+f.style.setProperty(
+"--move",
+(Math.random()*140-70)+"px"
+);
 
-      setTimeout(()=>{
-        flower.remove();
-      },8000);
+document.body.appendChild(f);
 
-    },i*45);
+setTimeout(()=>f.remove(),9000);
 
-  }
+},i*35);
+
+}
 
 }
 
 
 /* HEARTS */
-function createHeart(){
 
-  const h = document.createElement("div");
+function heartRain(){
 
-  h.className = "heart";
+const arr=[
+"💗","💖","💕","❤️",
+"💝","🫶🏻","🌸","✨"
+];
 
-  h.textContent =
-    ["💗","💖","💕","❤️","🌸"][Math.floor(Math.random()*5)];
+for(let i=0;i<50;i++){
 
-  h.style.left =
-    Math.random()*100 + "vw";
+setTimeout(()=>{
 
-  h.style.fontSize =
-    (15 + Math.random()*20) + "px";
+const h=document.createElement("div");
 
-  h.style.animationDuration =
-    (4 + Math.random()*4) + "s";
+h.className="float";
 
-  h.style.setProperty(
-    "--move",
-    (Math.random()*120-60) + "px"
-  );
+h.textContent=
+arr[Math.floor(Math.random()*arr.length)];
 
-  document.body.appendChild(h);
+h.style.left=Math.random()*100+"vw";
 
-  setTimeout(()=>{
-    h.remove();
-  },9000);
+h.style.fontSize=
+(18+Math.random()*28)+"px";
+
+h.style.animationDuration=
+(3+Math.random()*4)+"s";
+
+h.style.setProperty(
+"--move",
+(Math.random()*180-90)+"px"
+);
+
+document.body.appendChild(h);
+
+setTimeout(()=>h.remove(),8000);
+
+},i*70);
 
 }
 
-setInterval(createHeart,700);
+}
+
+
+/* CELEBRATION */
+
+function celebration(){
+
+goPage(7);
+
+heartRain();
+
+confetti();
+
+balloons();
+
+}
+
+
+/* CONFETTI */
+
+function confetti(){
+
+for(let i=0;i<120;i++){
+
+setTimeout(()=>{
+
+const c=document.createElement("div");
+
+c.className="confetti";
+
+c.style.left=Math.random()*100+"vw";
+
+c.style.background=
+`hsl(${Math.random()*360},90%,65%)`;
+
+c.style.animationDuration=
+(2+Math.random()*4)+"s";
+
+c.style.transform=
+`rotate(${Math.random()*360}deg)`;
+
+document.body.appendChild(c);
+
+setTimeout(()=>c.remove(),7000);
+
+},i*20);
+
+}
+
+}
+
+
+/* BALLOONS */
+
+function balloons(){
+
+for(let i=0;i<25;i++){
+
+setTimeout(()=>{
+
+const b=document.createElement("div");
+
+b.className="balloon";
+
+b.textContent=
+["🎈","🎈","🎈","💖"][Math.floor(Math.random()*4)];
+
+b.style.left=Math.random()*100+"vw";
+
+b.style.setProperty(
+"--x",
+(Math.random()*180-90)+"px"
+);
+
+b.style.animationDuration=
+(5+Math.random()*5)+"s";
+
+document.body.appendChild(b);
+
+setTimeout(()=>b.remove(),11000);
+
+},i*120);
+
+}
+
+}
+
+
+/* FIREWORKS */
+
+function startFireworks(){
+
+goPage(10);
+
+fireworks();
+
+heartRain();
+
+}
+
+
+/* FIREWORK ENGINE */
+
+function fireworks(){
+
+const box=document.getElementById("fireworks");
+
+for(let round=0;round<12;round++){
+
+setTimeout(()=>{
+
+const cx=
+20+Math.random()*60;
+
+const cy=
+15+Math.random()*45;
+
+for(let i=0;i<45;i++){
+
+const s=document.createElement("div");
+
+s.className="spark";
+
+s.style.left=cx+"%";
+
+s.style.top=cy+"%";
+
+const angle=
+(i/45)*Math.PI*2;
+
+const distance=
+60+Math.random()*120;
+
+s.style.setProperty(
+"--x",
+Math.cos(angle)*distance+"px"
+);
+
+s.style.setProperty(
+"--y",
+Math.sin(angle)*distance+"px"
+);
+
+box.appendChild(s);
+
+setTimeout(()=>s.remove(),1600);
+
+}
+
+},round*650);
+
+}
+
+}
 
 
 /* MUSIC */
+
 function startMusic(){
 
-  music.play()
-    .then(()=>{
-      musicBtn.textContent = "🎵";
-    })
-    .catch(()=>{
-      musicBtn.textContent = "🔇";
-    });
+music.play().catch(()=>{});
 
 }
 
 function toggleMusic(){
 
-  if(music.paused){
+if(music.paused){
 
-    music.play()
-      .then(()=>{
-        musicBtn.textContent = "🎵";
-      });
+music.play()
+.then(()=>{
+document.getElementById("musicBtn")
+.textContent="🎵";
+});
 
-  }else{
+}else{
 
-    music.pause();
-    musicBtn.textContent = "🔇";
+music.pause();
 
-  }
+document.getElementById("musicBtn")
+.textContent="🔇";
+
+}
 
 }
 
 
-/* INITIAL FLOWERS */
-setTimeout(()=>{
-  flowerStorm(25);
-},500);
+/* BACKGROUND FLOWERS */
+
+setInterval(()=>{
+
+const f=document.createElement("div");
+
+f.className="float";
+
+f.textContent=
+["🌸","💕","✨"][Math.floor(Math.random()*3)];
+
+f.style.left=Math.random()*100+"vw";
+
+f.style.fontSize=
+(15+Math.random()*15)+"px";
+
+f.style.animationDuration=
+(5+Math.random()*5)+"s";
+
+f.style.setProperty(
+"--move",
+(Math.random()*100-50)+"px"
+);
+
+document.body.appendChild(f);
+
+setTimeout(()=>f.remove(),10000);
+
+},900);
 
 
-/* TRY AUTOPLAY */
+/* TRY MUSIC */
+
 window.addEventListener("load",()=>{
 
-  music.play()
-    .then(()=>{
-      musicBtn.textContent="🎵";
-    })
-    .catch(()=>{
-      musicBtn.textContent="🔇";
-    });
+music.play().catch(()=>{
+document.getElementById("musicBtn")
+.textContent="🔇";
+});
 
 });
 
