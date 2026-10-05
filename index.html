@@ -3,1106 +3,724 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>FOR MY LOVE SALMU💝</title>
+<title>Our Little Love Story 💗</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
 
 body{
   min-height:100vh;
-  overflow:hidden;
   font-family:Arial,"Noto Sans Bengali",sans-serif;
-  color:#54283f;
+  overflow-x:hidden;
+  color:#fff;
   background:
-    radial-gradient(circle at 15% 20%,#ffd5e5,transparent 35%),
-    radial-gradient(circle at 85% 80%,#d9d4ff,transparent 35%),
-    linear-gradient(135deg,#fff0f6,#eee9ff,#e9faff);
+    radial-gradient(circle at 20% 20%,#ff9fc8 0,transparent 28%),
+    radial-gradient(circle at 80% 80%,#b69cff 0,transparent 30%),
+    linear-gradient(135deg,#160b25,#35152f,#11152f);
+}
+
+body:before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,.06),
+    transparent
+  );
+  animation:shine 7s infinite;
+}
+
+@keyframes shine{
+  0%{transform:translateX(-100%)}
+  100%{transform:translateX(100%)}
 }
 
 .page{
-  position:absolute;
-  inset:0;
   display:none;
-  align-items:center;
+  min-height:100vh;
+  padding:28px 16px;
   justify-content:center;
-  padding:18px;
-  z-index:5;
+  align-items:center;
+  text-align:center;
+  position:relative;
 }
 
 .page.active{
   display:flex;
-  animation:pageIn .7s ease;
+  animation:pageIn .8s ease;
 }
 
 @keyframes pageIn{
-  from{opacity:0;transform:scale(.92) translateY(20px)}
+  from{opacity:0;transform:scale(.94) translateY(20px)}
   to{opacity:1;transform:scale(1) translateY(0)}
 }
 
 .card{
-  width:min(94vw,540px);
-  max-height:92vh;
-  overflow:auto;
-  text-align:center;
-  padding:28px 20px;
-  border-radius:32px;
-  background:rgba(255,255,255,.58);
-  backdrop-filter:blur(20px);
-  border:1px solid rgba(255,255,255,.8);
-  box-shadow:0 25px 80px rgba(90,35,75,.2);
+  width:min(94%,650px);
+  padding:30px 20px;
+  border:1px solid rgba(255,255,255,.2);
+  border-radius:30px;
+  background:rgba(255,255,255,.10);
+  backdrop-filter:blur(18px);
+  box-shadow:
+    0 25px 80px rgba(0,0,0,.4),
+    inset 0 1px rgba(255,255,255,.2);
 }
 
 h1{
-  font-size:clamp(28px,8vw,45px);
-  margin-bottom:12px;
+  font-size:clamp(28px,8vw,55px);
+  margin:10px 0 18px;
+  text-shadow:0 0 25px rgba(255,150,210,.8);
 }
 
 h2{
-  font-size:26px;
-  margin-bottom:12px;
-}
-
-.subtitle{
-  line-height:1.8;
-  font-size:17px;
-  margin:12px 0 22px;
-}
-
-.cat{
-  font-size:72px;
-  animation:catFloat 2.5s infinite ease-in-out;
-}
-
-@keyframes catFloat{
-  50%{transform:translateY(-10px) rotate(3deg)}
-}
-
-.speech{
-  display:inline-block;
-  background:white;
-  padding:11px 17px;
-  border-radius:20px;
-  margin:8px 0 16px;
-  box-shadow:0 8px 25px #00000012;
-}
-
-.buttons{
-  display:flex;
-  justify-content:center;
-  gap:14px;
-  min-height:55px;
-  margin-top:20px;
-}
-
-button{
-  border:0;
-  border-radius:999px;
-  padding:14px 25px;
-  font-weight:bold;
-  font-size:16px;
-  cursor:pointer;
-  box-shadow:0 8px 20px #00000018;
-}
-
-.yes{
-  color:white;
-  background:linear-gradient(135deg,#ff4f8b,#ff8fb6);
-}
-
-.next{
-  color:white;
-  background:linear-gradient(135deg,#7048ff,#a05cff);
-  margin-top:20px;
-}
-
-.no{
-  background:white;
-  color:#9b5474;
-}
-
-.progress{
-  display:flex;
-  justify-content:center;
-  gap:6px;
+  font-size:clamp(23px,6vw,38px);
   margin-bottom:15px;
 }
 
-.dot{
-  width:9px;
-  height:9px;
-  background:#d8bfd0;
-  border-radius:50%;
+p{
+  font-size:18px;
+  line-height:1.7;
 }
 
-.dot.active{
-  width:25px;
-  background:#ff6497;
+.cute{
+  font-size:75px;
+  animation:bounce 2s infinite;
 }
 
-.question{
-  font-size:22px;
+@keyframes bounce{
+  50%{transform:translateY(-12px) rotate(3deg)}
+}
+
+.btn{
+  border:0;
+  padding:14px 27px;
+  margin:8px;
+  border-radius:50px;
+  font-size:17px;
   font-weight:bold;
-  line-height:1.5;
+  cursor:pointer;
+  color:#35152f;
+  background:linear-gradient(135deg,#fff,#ffc8e3);
+  box-shadow:0 8px 25px rgba(255,120,190,.3);
+  transition:.25s;
 }
 
-.question-number{
-  font-size:13px;
-  margin-bottom:8px;
-  color:#9b5d7c;
+.btn:hover{
+  transform:translateY(-3px) scale(1.04);
 }
 
-/* GALLERY */
+.yes{
+  background:linear-gradient(135deg,#ff6fae,#ffb6d8);
+  color:white;
+}
 
+.no{
+  position:relative;
+}
+
+.next{
+  margin-top:22px;
+}
+
+/* floating hearts */
+.float{
+  position:fixed;
+  bottom:-30px;
+  font-size:20px;
+  pointer-events:none;
+  animation:floatUp linear forwards;
+  z-index:10;
+}
+
+@keyframes floatUp{
+  to{
+    transform:translateY(-110vh) rotate(360deg);
+    opacity:0;
+  }
+}
+
+/* photos */
 .gallery{
   display:grid;
-  grid-template-columns:1fr 1fr;
+  grid-template-columns:repeat(2,1fr);
   gap:12px;
+  margin:20px 0;
 }
 
 .gallery img{
   width:100%;
-  aspect-ratio:1;
+  height:230px;
   object-fit:cover;
   border-radius:20px;
-  border:3px solid white;
-  box-shadow:0 8px 20px #0002;
+  border:2px solid rgba(255,255,255,.35);
+  box-shadow:0 10px 30px rgba(0,0,0,.35);
+  transition:.4s;
 }
 
-/* NOTE */
-
-.note{
-  text-align:left;
-  background:#fffdf5;
-  padding:25px;
-  border-radius:8px;
-  line-height:1.9;
-  box-shadow:0 15px 35px #0002;
+.gallery img:hover{
+  transform:scale(1.04) rotate(1deg);
 }
 
-.note-content{
-  padding-left:12px;
-}
-
-.signature{
-  text-align:right;
-  margin-top:20px;
-  font-weight:bold;
-}
-
-/* BIG LOVE */
-
-.bigLove{
-  font-size:100px;
-  animation:bigHeart 1.2s infinite;
-  filter:drop-shadow(0 15px 20px #ff4c8b55);
-}
-
-@keyframes bigHeart{
-  0%,100%{transform:scale(1)}
-  50%{transform:scale(1.2)}
-}
-
-.loveText{
-  font-size:42px;
-  font-weight:900;
-  background:linear-gradient(90deg,#ff3e83,#9b5cff,#ff3e83);
-  background-size:200%;
-  -webkit-background-clip:text;
-  color:transparent;
-  animation:textGlow 2s infinite linear;
-}
-
-@keyframes textGlow{
-  to{background-position:200%}
-}
-
-/* EMOJI */
-
-.emojiBox{
-  font-size:45px;
-  line-height:1.7;
-  animation:emojiFloat 2s infinite alternate;
-}
-
-@keyframes emojiFloat{
-  from{transform:translateY(5px)}
-  to{transform:translateY(-8px)}
-}
-
-/* BALLOONS */
-
-.balloon{
+/* flowers */
+.flower{
   position:fixed;
-  bottom:-100px;
-  font-size:50px;
-  z-index:1;
-  animation:balloonUp linear forwards;
+  top:-60px;
+  z-index:20;
+  pointer-events:none;
+  animation:flowerFall 5s linear forwards;
 }
 
-@keyframes balloonUp{
-  to{
-    transform:translateY(-120vh) translateX(var(--x));
-  }
-}
-
-/* CONFETTI */
-
-.confetti{
-  position:fixed;
-  top:-20px;
-  width:9px;
-  height:15px;
-  z-index:50;
-  animation:confettiFall linear forwards;
-}
-
-@keyframes confettiFall{
+@keyframes flowerFall{
   to{
     transform:translateY(110vh) rotate(720deg);
+    opacity:.2;
   }
 }
 
-/* FIREWORKS */
-
-#fireworks{
-  position:fixed;
-  inset:0;
-  pointer-events:none;
-  z-index:1;
+/* notes */
+.note{
+  margin:20px auto;
+  padding:28px 20px;
+  max-width:550px;
+  border-radius:22px;
+  color:#54203f;
+  background:
+    linear-gradient(135deg,#fff9fc,#ffe7f1);
+  box-shadow:0 20px 50px rgba(0,0,0,.3);
+  text-align:left;
 }
 
-.spark{
+.note h3{
+  text-align:center;
+  margin-bottom:15px;
+  font-size:25px;
+}
+
+/* envelope */
+.envelope{
+  font-size:100px;
+  cursor:pointer;
+  animation:pulse 1.8s infinite;
+}
+
+@keyframes pulse{
+  50%{transform:scale(1.1)}
+}
+
+/* gift */
+.gift{
+  font-size:110px;
+  cursor:pointer;
+  animation:gift 1.5s infinite;
+}
+
+@keyframes gift{
+  50%{transform:rotate(-5deg) scale(1.08)}
+}
+
+/* videos */
+video{
+  width:100%;
+  max-height:400px;
+  margin:10px 0;
+  border-radius:22px;
+  background:#000;
+  box-shadow:0 15px 40px rgba(0,0,0,.45);
+}
+
+/* fireworks */
+.sky{
+  position:relative;
+  width:100%;
+  height:360px;
+  overflow:hidden;
+  border-radius:25px;
+  background:
+    radial-gradient(circle at 50% 30%,#24205c,#080817 65%);
+}
+
+.firework{
   position:absolute;
   width:6px;
   height:6px;
   border-radius:50%;
   background:white;
-  animation:explode 1.4s ease-out forwards;
-  box-shadow:0 0 12px white;
+  box-shadow:
+    0 0 10px #fff,
+    0 0 25px #ff7acb,
+    0 0 50px #a88cff;
+  animation:boom 2s infinite;
 }
 
-@keyframes explode{
-  0%{
-    transform:translate(0,0) scale(1);
-    opacity:1;
-  }
-  100%{
-    transform:translate(var(--x),var(--y)) scale(.2);
-    opacity:0;
-  }
+.f1{left:25%;top:35%}
+.f2{left:70%;top:25%;animation-delay:.7s}
+.f3{left:50%;top:55%;animation-delay:1.2s}
+
+@keyframes boom{
+  0%,100%{transform:scale(.1);opacity:.2}
+  50%{transform:scale(15);opacity:1}
 }
 
-/* FLOATING */
-
-.float{
-  position:fixed;
-  bottom:-50px;
-  pointer-events:none;
-  z-index:2;
-  animation:floatUp linear forwards;
+/* celebration */
+.bigHeart{
+  font-size:120px;
+  animation:heartBeat 1s infinite;
 }
 
-@keyframes floatUp{
-  to{
-    transform:translateY(-115vh) translateX(var(--move)) rotate(25deg);
-    opacity:0;
-  }
+@keyframes heartBeat{
+  50%{transform:scale(1.18)}
 }
 
-/* MUSIC */
+.stars{
+  letter-spacing:8px;
+  font-size:25px;
+  animation:twinkle 1.5s infinite alternate;
+}
 
-.music{
-  position:fixed;
-  right:14px;
-  bottom:14px;
-  z-index:100;
-  width:48px;
-  height:48px;
-  padding:0;
-  background:white;
-  font-size:20px;
+@keyframes twinkle{
+  from{opacity:.4}
+  to{opacity:1}
 }
 
 .small{
-  font-size:12px;
-  opacity:.65;
-  margin-top:13px;
+  font-size:14px;
+  opacity:.75;
+  margin-top:15px;
 }
 </style>
 </head>
 
 <body>
 
-<div id="fireworks"></div>
+<audio id="music" src="./song.mp3" loop preload="auto"></audio>
 
-<!-- 1 -->
-<section class="page active" id="page1">
+<!-- PAGE 1 -->
+<section class="page active" id="p1">
 <div class="card">
+  <div class="cute">🐱🎀</div>
+  <div class="stars">✦ ✧ ✦ ✧ ✦</div>
+  <h1>I LOVE YOU 💗</h1>
+  <p>Salma, তুমি কি Saju-কে সত্যি ভালোবাসো? 🫠</p>
 
-<div class="cat">🫶🏻🎀</div>
+  <button class="btn yes" onclick="yesStart()">হ্যাঁ 💗</button>
+  <button class="btn no" id="noBtn">না 🙈</button>
 
-<div class="speech">🐾 একটা ছোট্ট প্রশ্ন...</div>
-
-<h1>সালমা 💗</h1>
-
-<p class="subtitle">
-তুমি কি <b>Saju</b>-কে সত্যি সত্যি ভালোবাসো? 🥺🌸
-</p>
-
-<div class="buttons">
-<button class="yes" onclick="startQuestions()">হ্যাঁ 💖</button>
-
-<button class="no"
-onmouseover="moveNo(this)"
-ontouchstart="moveNo(this)">
-না 🙈
-</button>
-</div>
-
-<p class="small">একটা ছোট্ট surprise অপেক্ষা করছে 🎁</p>
-
+  <p class="small">একটা ছোট্ট surprise journey অপেক্ষা করছে...</p>
 </div>
 </section>
 
-
-<!-- 2 -->
-<section class="page" id="page2">
+<!-- PAGE 2 -->
+<section class="page" id="p2">
 <div class="card">
+  <div class="cute">🐱💞🐱</div>
+  <h2>তাহলে ৩টা ছোট প্রশ্ন 😌</h2>
 
-<div class="progress">
-<span class="dot active"></span>
-<span class="dot"></span>
-<span class="dot"></span>
-</div>
-
-<div class="cat">💝💗</div>
-
-<div class="question-number" id="qNumber">
-প্রশ্ন ১ / ৩
-</div>
-
-<div class="question" id="questionText">
-তুমি কি সত্যি Saju-কে ভালোবাসো? 💕
-</div>
-
-<div class="buttons">
-
-<button class="yes" onclick="nextQuestion()">
-হ্যাঁ 💖
-</button>
-
-<button class="no"
-onmouseover="moveNo(this)"
-ontouchstart="moveNo(this)">
-না 🙈
-</button>
-
-</div>
-
+  <div id="questions">
+    <p>১. Saju-এর সাথে কথা বলতে তোমার ভালো লাগে? 💗</p>
+    <button class="btn yes" onclick="question(1)">হ্যাঁ 🥰</button>
+    <button class="btn no qno">না 🙈</button>
+  </div>
 </div>
 </section>
 
-
-<!-- 3 FLOWER -->
-<section class="page" id="page3">
+<!-- PAGE 3 FLOWERS -->
+<section class="page" id="p3">
 <div class="card">
-
-<div class="cat">🥰🌸</div>
-
-<h1>ফুল শুধু তোমার জন্য 🌷</h1>
-
-<p class="subtitle">
-চারপাশটা একটু ফুলে ভরে যাক... 💐
-</p>
-
-<button class="next" onclick="goPage(4)">
-Next 🌸 →
-</button>
-
+  <div class="cute">🌸🌷🌹</div>
+  <h1>Flower Surprise 🌸</h1>
+  <p>এই ফুলগুলো তোমার জন্য...</p>
+  <div style="font-size:50px;margin:25px">🌷🌸🌹🌺💐🌸🌷</div>
+  <button class="btn next" onclick="go(4)">Next → 💗</button>
 </div>
 </section>
 
-
-<!-- 4 PHOTO -->
-<section class="page" id="page4">
+<!-- PAGE 4 CAT VIDEO -->
+<section class="page" id="p4">
 <div class="card">
+  <div class="cute">🐱💗</div>
+  <h2>Cute Cat Surprise</h2>
+  <p>আগে এই ছোট্ট surprise-টা দেখো 🫠</p>
 
-<div class="cat">😘📸</div>
+  <video controls playsinline preload="metadata">
+    <source src="./cat1.mp4" type="video/mp4">
+  </video>
 
-<h2>কিছু সুন্দর স্মৃতি 💗</h2>
+  <video controls playsinline preload="metadata">
+    <source src="./cat2.mp4" type="video/mp4">
+  </video>
 
-<div class="gallery">
-
-<img src="./salma1.jpg">
-<img src="./salma2.jpg">
-<img src="./salma3.jpg">
-<img src="./salma4.jpg">
-
-</div>
-
-<button class="next" onclick="goPage(5)">
-আরেকটা surprise 💌 →
-</button>
-
+  <button class="btn next" onclick="go(5)">Next → 🦋</button>
 </div>
 </section>
 
-
-<!-- 5 NOTE -->
-<section class="page" id="page5">
+<!-- PAGE 5 PHOTOS -->
+<section class="page" id="p5">
 <div class="card">
+  <div class="cute">📸💗</div>
+  <h2>Some Beautiful Memories</h2>
 
-<div class="cat">💝💌</div>
+  <div class="gallery">
+    <img src="./salma1.jpg" alt="Memory 1">
+    <img src="./salma2.jpg" alt="Memory 2">
+    <img src="./salma3.jpg" alt="Memory 3">
+    <img src="./salma4.jpg" alt="Memory 4">
+  </div>
 
-<h2>একটা ছোট্ট চিঠি 💝</h2>
-
-<div class="note">
-
-<div class="note-content">
-
-<b>প্রিয় সালমা, 🫶🏻💝</b>
-
-<br><br>
-
-এই ছোট্ট ওয়েবসাইটটা হয়তো খুব বড় কোনো উপহার না,
-কিন্তু এর প্রতিটা অংশ তোমার জন্য একটা সুন্দর মুহূর্ত
-তৈরি করার ছোট্ট একটা চেষ্টা। 🌸
-
-<br><br>
-
-জীবনে কিছু মানুষ আসে,
-যাদের উপস্থিতি সাধারণ একটা দিনকেও
-আরও সুন্দর করে তোলে। 💗
-
-<br><br>
-
-এই surprise-টা তোমার জন্যই বানানো। 🌷
-
-<div class="signature">
-— YOUR_SAJU🫶🏻💝
-</div>
-
-</div>
-</div>
-
-<button class="next" onclick="goPage(6)">
-Love Surprise 💖 →
-</button>
-
+  <button class="btn next" onclick="go(6)">Next → 💌</button>
 </div>
 </section>
 
-
-<!-- 6 LOVE SURPRISE -->
-<section class="page" id="page6">
+<!-- PAGE 6 ENVELOPE -->
+<section class="page" id="p6">
 <div class="card">
+  <h2>একটা Secret Message আছে 💌</h2>
+  <div class="envelope" onclick="openLetter()">💌</div>
+  <p>Envelope-এ touch করো...</p>
 
-<div class="bigLove">💖</div>
+  <div id="letter1" class="note" style="display:none">
+    <h3>For You 💗</h3>
+    <p>
+      কিছু মানুষ জীবনে আসে, তারপর সাধারণ মুহূর্তগুলোও
+      সুন্দর স্মৃতিতে পরিণত হয়। 🌸
+      এই ছোট্ট website-টা সেই সুন্দর মুহূর্তগুলোর
+      একটা cute surprise মাত্র। 🫠💗
+    </p>
+  </div>
 
-<div class="loveText">
-I LOVE YOU
-</div>
-
-<p class="subtitle">
-এই মুহূর্তটা শুধু একটা সুন্দর স্মৃতি হয়ে থাকুক। 🫶🏻🌸
-</p>
-
-<button class="next" onclick="celebration()">
-Big Celebration 🎉 →
-</button>
-
+  <button class="btn next" onclick="go(7)">Next → 🎁</button>
 </div>
 </section>
 
-
-<!-- 7 CELEBRATION -->
-<section class="page" id="page7">
+<!-- PAGE 7 GIFT -->
+<section class="page" id="p7">
 <div class="card">
+  <h2>একটা Gift তোমার জন্য 🎁</h2>
+  <div class="gift" onclick="openGift()">🎁</div>
 
-<div class="cat">🥀🎉</div>
+  <div id="giftText" style="display:none">
+    <h1>💗 SURPRISE! 💗</h1>
+    <p>তোমার জন্য আরও অনেক surprise বাকি আছে... 🫠</p>
+  </div>
 
-<h1>BIG CELEBRATION 🎊</h1>
-
-<p class="subtitle">
-আজকে শুধু আনন্দ আর ভালোবাসার celebration! 💝
-</p>
-
-<div class="emojiBox">
-🎈 🎉 💖 🎊 🌸 🥳 💕 🎈
-</div>
-
-<button class="next" onclick="goPage(8)">
-Love Emoji Surprise 💕 →
-</button>
-
+  <button class="btn next" onclick="go(8)">Next → 🎬</button>
 </div>
 </section>
 
-
-<!-- 8 EMOJI -->
-<section class="page" id="page8">
+<!-- PAGE 8 LOVE VIDEOS -->
+<section class="page" id="p8">
 <div class="card">
+  <div class="cute">🎬💗</div>
+  <h2>Love Video Surprise</h2>
+  <p>আরও দুইটা ছোট surprise video...</p>
 
-<div class="cat">🥰💞</div>
+  <video controls playsinline preload="metadata">
+    <source src="./love1.mp4" type="video/mp4">
+  </video>
 
-<h1>LOVE EMOJI SURPRISE</h1>
+  <video controls playsinline preload="metadata">
+    <source src="./love2.mp4" type="video/mp4">
+  </video>
 
-<div class="emojiBox">
-❤️ 💗 💕 💖 💝<br>
-🫶🏻 🌸 🥰 🌷 💐<br>
-💞 💓 💘 💌 ✨
-</div>
-
-<p class="subtitle">
-এক পৃথিবী ভালোবাসা তোমার জন্য। 💝
-</p>
-
-<button class="next" onclick="goPage(9)">
-আরেকটা Love Note 💌 →
-</button>
-
+  <button class="btn next" onclick="go(9)">Next → 🎉</button>
 </div>
 </section>
 
-
-<!-- 9 SECOND NOTE -->
-<section class="page" id="page9">
+<!-- PAGE 9 CELEBRATION -->
+<section class="page" id="p9">
 <div class="card">
+  <div class="bigHeart">💗</div>
+  <h1>BIG CELEBRATION 🎉</h1>
+  <p>আজকের এই ছোট্ট মুহূর্তটা special হোক! 🥰</p>
+  <div style="font-size:55px;margin:25px">
+    🎈🎊🎈🎉🎈🎊🎈
+  </div>
 
-<div class="cat">🫶🏻💝</div>
-
-<h2>আরেকটা কথা... 🫶🏻</h2>
-
-<div class="note">
-
-<div class="note-content">
-
-<b>সালমা, 💝</b>
-
-<br><br>
-
-কখনো কখনো অনেক কথা মুখে বলা যায় না।
-তাই এই ছোট্ট website-এর মাধ্যমে
-একটু সুন্দর করে বলা। 🌸
-
-<br><br>
-
-তোমার হাসিটা সুন্দর,
-তোমার ভালো থাকা আরও সুন্দর। 💗
-
-<br><br>
-
-যতদিন এই website-টা মনে থাকবে,
-ততদিন এই ছোট্ট surprise-টার কথাটাও
-মনে থাকবে। 🫶🏻
-
-<br><br>
-
-<b>Stay happy & keep smiling. 🌷</b>
-
-<div class="signature">
-— YOUR SAJU💝
-</div>
-
-</div>
-</div>
-
-<button class="next" onclick="startFireworks()">
-আকাশের surprise 🎆 →
-</button>
-
+  <button class="btn next" onclick="go(10)">Next → 💕</button>
 </div>
 </section>
 
-
-<!-- 10 FIREWORK -->
-<section class="page" id="page10">
+<!-- PAGE 10 EMOJI -->
+<section class="page" id="p10">
 <div class="card">
+  <h1>LOVE EMOJI SURPRISE</h1>
+  <div style="font-size:55px;line-height:1.7">
+    💗 💕 💖 💘 💝<br>
+    🥰 🫠 😽 🌸 🦋<br>
+    💞 💓 💕 💗 💖
+  </div>
 
-<div class="bigLove">🎆</div>
+  <p>
+    যতগুলো heart দেখা যাচ্ছে,
+    তার থেকেও বেশি cute memories তৈরি হোক। 🌷
+  </p>
 
-<div class="loveText">
-LOVE
-</div>
-
-<h2>আকাশটাও আজ সুন্দর ✨</h2>
-
-<p class="subtitle">
-একটা ছোট্ট fireworks surprise শুধু তোমার জন্য। 💝
-</p>
-
-<button class="next" onclick="goPage(11)">
-Special Message 🫶🏻 →
-</button>
-
+  <button class="btn next" onclick="go(11)">Next → 💌</button>
 </div>
 </section>
 
-
-<!-- 11 FINAL -->
-<section class="page" id="page11">
+<!-- PAGE 11 SECOND NOTE -->
+<section class="page" id="p11">
 <div class="card">
+  <div class="cute">🐱💌</div>
+  <h2>আরেকটা ছোট্ট Note</h2>
 
-<div class="cat">💝🫶🏻</div>
+  <div class="note">
+    <h3>Dear Salma 🌸</h3>
+    <p>
+      সবসময় perfect কিছু প্রয়োজন হয় না।
+      ছোট ছোট হাসি, সুন্দর কথা আর ভালো স্মৃতিই
+      অনেক সময় সবচেয়ে special হয়ে থাকে। 💗
+      এই page-গুলো সেই ছোট্ট happiness-এর জন্য।
+    </p>
+  </div>
 
-<h1>Special For You 💝</h1>
-
-<div class="bigLove">💗</div>
-
-<p class="subtitle">
-
-কিছু surprise শব্দে শেষ হয় না... 🌸
-
-<br><br>
-
-এই পুরো website-এর প্রতিটা page,
-প্রতিটা ফুল,
-প্রতিটা heart,
-আর প্রতিটা ছোট্ট animation
-একটা সুন্দর স্মৃতি তৈরি করার জন্য। 💕
-
-<br><br>
-
-<b>
-I Love U SALMÚ 🥰,
-FOR MY LOVE 🫶🏻,
-MY LIFE 🫶🏻💝🫶🏻
-</b>
-
-<br><br>
-
-🌸 💝 ❤️‍🩹 🌷 💗
-
-</p>
-
-<div class="loveText">
-FOR SALMU
-</div>
-
-<p class="small">
-The End... but the memory stays forever 💝
-</p>
-
+  <button class="btn next" onclick="go(12)">Next → 🌙</button>
 </div>
 </section>
 
+<!-- PAGE 12 SKY -->
+<section class="page" id="p12">
+<div class="card">
+  <h2>Look At The Sky 🌌</h2>
 
-<button class="music" onclick="toggleMusic()" id="musicBtn">
-🎵
-</button>
+  <div class="sky">
+    <div class="firework f1"></div>
+    <div class="firework f2"></div>
+    <div class="firework f3"></div>
 
-<audio id="bgMusic" src="./song.mp3" loop></audio>
+    <div style="
+      position:absolute;
+      bottom:25px;
+      left:0;
+      right:0;
+      font-size:55px;
+    ">🌃✨🌙✨🌃</div>
+  </div>
 
+  <p style="margin-top:20px">
+    আকাশের তারার মতো সুন্দর হোক প্রতিটা সুন্দর মুহূর্ত। ✨
+  </p>
+
+  <button class="btn next" onclick="go(13)">Next → 🌹</button>
+</div>
+</section>
+
+<!-- PAGE 13 ROSE -->
+<section class="page" id="p13">
+<div class="card">
+  <h1>🌹 A Little Rose Garden 🌹</h1>
+
+  <div style="font-size:65px;line-height:1.6">
+    🌹🌷🌹🌷🌹<br>
+    🌸💐🌸💐🌸<br>
+    🌹🌷🌹🌷🌹
+  </div>
+
+  <p>
+    কিছু surprise শেষ হয়,<br>
+    কিন্তু সুন্দর memories থেকে যায়। 💗
+  </p>
+
+  <button class="btn next" onclick="go(14)">Final Surprise → 🫠</button>
+</div>
+</section>
+
+<!-- PAGE 14 FINAL -->
+<section class="page" id="p14">
+<div class="card">
+  <div class="bigHeart">💖</div>
+  <div class="stars">✦ ✧ ✦ ✧ ✦</div>
+
+  <h1>Special For You 🫠</h1>
+
+  <div class="note">
+    <h3>💌 A Little Special Message</h3>
+    <p>
+      এই পুরো ছোট্ট journey-টা ছিল শুধু একটা সুন্দর
+      surprise তৈরি করার জন্য। 🌸
+      <br><br>
+      ছবি, ফুল, cat, music, video, stars আর fireworks—
+      সবকিছু মিলিয়ে একটা ছোট্ট magical memory। ✨
+      <br><br>
+      তোমার দিনটা সুন্দর হোক,
+      হাসিটা সুন্দর থাকুক,
+      আর ভালো মুহূর্তগুলো অনেকদিন মনে থাকুক। 💗
+    </p>
+  </div>
+
+  <div style="font-size:50px">
+    🐱💗🌸🦋💌🎆🌹
+  </div>
+
+  <button class="btn yes" onclick="restart()">
+    Replay Our Story 🔄💗
+  </button>
+</div>
+</section>
 
 <script>
+let current=1;
 
-let qIndex=0;
+function go(n){
+  document.getElementById("p"+current).classList.remove("active");
+  current=n;
+  document.getElementById("p"+current).classList.add("active");
 
-const questions=[
-"তুমি কি সত্যি Saju-কে ভালোবাসো? 💕",
-"সারাজীবন'আমার হয়ে_থাকবে'তো🥺🫶🏻",
-"এই ছোট্ট surprise-টা accept করবে? 🎁💖"
-];
+  if(n===3) flowerStorm();
+  if(n===9) celebration();
+  if(n===12) fireworksHearts();
 
-const music=document.getElementById("bgMusic");
-
-
-/* PAGE */
-
-function goPage(n){
-
-document.querySelectorAll(".page")
-.forEach(p=>p.classList.remove("active"));
-
-document.getElementById("page"+n)
-.classList.add("active");
-
+  window.scrollTo(0,0);
 }
 
+function yesStart(){
+  const music=document.getElementById("music");
 
-/* START */
+  music.volume=.55;
+  music.play().catch(()=>{});
 
-function startQuestions(){
-
-startMusic();
-
-qIndex=0;
-
-document.getElementById("questionText")
-.textContent=questions[0];
-
-document.getElementById("qNumber")
-.textContent="প্রশ্ন ১ / ৩";
-
-goPage(2);
-
+  go(2);
+  hearts();
 }
 
-
-/* QUESTIONS */
-
-function nextQuestion(){
-
-startMusic();
-
-qIndex++;
-
-if(qIndex>=questions.length){
-
-flowerStorm(100);
-
-setTimeout(()=>{
-goPage(3);
-},1000);
-
-return;
-
-}
-
-document.getElementById("questionText")
-.textContent=questions[qIndex];
-
-document.getElementById("qNumber")
-.textContent=
-"প্রশ্ন "+(qIndex+1)+" / ৩";
-
-}
-
-
-/* NO MOVE */
+const noBtn=document.getElementById("noBtn");
 
 function moveNo(btn){
+  const x=Math.random()*180-90;
+  const y=Math.random()*100-50;
 
-const parent=btn.parentElement;
-
-const maxX=Math.max(
-40,
-parent.clientWidth-btn.offsetWidth
-);
-
-const x=(Math.random()*maxX)-(maxX/2);
-
-const y=(Math.random()*50)-25;
-
-btn.style.transform=
-`translate(${x}px,${y}px)`;
-
+  btn.style.transform=`translate(${x}px,${y}px)`;
 }
 
+noBtn.addEventListener("mouseenter",()=>moveNo(noBtn));
+noBtn.addEventListener("touchstart",(e)=>{
+  e.preventDefault();
+  moveNo(noBtn);
+});
 
-/* FLOWERS */
+function question(n){
+  const q=document.getElementById("questions");
 
-function flowerStorm(amount){
+  if(n===1){
+    q.innerHTML=`
+      <p>২. Cute surprise পেলে ভালো লাগে? 🥰</p>
+      <button class="btn yes" onclick="question(2)">হ্যাঁ 💗</button>
+      <button class="btn no qno">না 🙈</button>
+    `;
+  }
 
-const flowers=[
-"🌸","🌷","🌹","🌺",
-"💐","🌼","🪻","🌻"
-];
+  if(n===2){
+    q.innerHTML=`
+      <p>৩. এই little love story দেখতে থাকবে? 🫠</p>
+      <button class="btn yes" onclick="question(3)">হ্যাঁ 🥰</button>
+      <button class="btn no qno">না 🙈</button>
+    `;
+  }
 
-for(let i=0;i<amount;i++){
+  if(n===3){
+    go(3);
+  }
 
-setTimeout(()=>{
-
-const f=document.createElement("div");
-
-f.className="float";
-
-f.textContent=
-flowers[Math.floor(Math.random()*flowers.length)];
-
-f.style.left=Math.random()*100+"vw";
-
-f.style.fontSize=
-(20+Math.random()*28)+"px";
-
-f.style.animationDuration=
-(3+Math.random()*5)+"s";
-
-f.style.setProperty(
-"--move",
-(Math.random()*140-70)+"px"
-);
-
-document.body.appendChild(f);
-
-setTimeout(()=>f.remove(),9000);
-
-},i*35);
-
+  document.querySelectorAll(".qno").forEach(b=>{
+    b.addEventListener("mouseenter",()=>moveNo(b));
+    b.addEventListener("touchstart",(e)=>{
+      e.preventDefault();
+      moveNo(b);
+    });
+  });
 }
 
+function hearts(){
+  setInterval(()=>{
+    const h=document.createElement("div");
+    h.className="float";
+    h.innerHTML=["💗","💕","💖","💞","🩷"][Math.floor(Math.random()*5)];
+    h.style.left=Math.random()*100+"vw";
+    h.style.animationDuration=(4+Math.random()*4)+"s";
+    h.style.fontSize=(15+Math.random()*25)+"px";
+    document.body.appendChild(h);
+
+    setTimeout(()=>h.remove(),8000);
+  },450);
 }
 
+function flowerStorm(){
+  const flowers=["🌸","🌷","🌹","🌺","💐","🌼","🦋"];
 
-/* HEARTS */
+  for(let i=0;i<45;i++){
+    setTimeout(()=>{
+      const f=document.createElement("div");
+      f.className="flower";
+      f.innerHTML=flowers[Math.floor(Math.random()*flowers.length)];
+      f.style.left=Math.random()*100+"vw";
+      f.style.fontSize=(18+Math.random()*28)+"px";
+      f.style.animationDuration=(3+Math.random()*4)+"s";
+      document.body.appendChild(f);
 
-function heartRain(){
-
-const arr=[
-"💗","💖","💕","❤️",
-"💝","🫶🏻","🌸","✨"
-];
-
-for(let i=0;i<50;i++){
-
-setTimeout(()=>{
-
-const h=document.createElement("div");
-
-h.className="float";
-
-h.textContent=
-arr[Math.floor(Math.random()*arr.length)];
-
-h.style.left=Math.random()*100+"vw";
-
-h.style.fontSize=
-(18+Math.random()*28)+"px";
-
-h.style.animationDuration=
-(3+Math.random()*4)+"s";
-
-h.style.setProperty(
-"--move",
-(Math.random()*180-90)+"px"
-);
-
-document.body.appendChild(h);
-
-setTimeout(()=>h.remove(),8000);
-
-},i*70);
-
+      setTimeout(()=>f.remove(),7000);
+    },i*100);
+  }
 }
 
+function openLetter(){
+  document.getElementById("letter1").style.display="block";
 }
 
-
-/* CELEBRATION */
+function openGift(){
+  document.getElementById("giftText").style.display="block";
+  celebration();
+}
 
 function celebration(){
+  for(let i=0;i<35;i++){
+    setTimeout(()=>{
+      const e=document.createElement("div");
+      e.className="float";
+      e.innerHTML=["🎉","🎈","💗","✨","💖"][Math.floor(Math.random()*5)];
+      e.style.left=Math.random()*100+"vw";
+      e.style.animationDuration=(2+Math.random()*3)+"s";
+      document.body.appendChild(e);
 
-goPage(7);
-
-heartRain();
-
-confetti();
-
-balloons();
-
+      setTimeout(()=>e.remove(),5000);
+    },i*60);
+  }
 }
 
+function fireworksHearts(){
+  for(let i=0;i<25;i++){
+    setTimeout(()=>{
+      const h=document.createElement("div");
+      h.className="float";
+      h.innerHTML="✨";
+      h.style.left=Math.random()*100+"vw";
+      h.style.animationDuration="3s";
+      document.body.appendChild(h);
 
-/* CONFETTI */
-
-function confetti(){
-
-for(let i=0;i<120;i++){
-
-setTimeout(()=>{
-
-const c=document.createElement("div");
-
-c.className="confetti";
-
-c.style.left=Math.random()*100+"vw";
-
-c.style.background=
-`hsl(${Math.random()*360},90%,65%)`;
-
-c.style.animationDuration=
-(2+Math.random()*4)+"s";
-
-c.style.transform=
-`rotate(${Math.random()*360}deg)`;
-
-document.body.appendChild(c);
-
-setTimeout(()=>c.remove(),7000);
-
-},i*20);
-
+      setTimeout(()=>h.remove(),3500);
+    },i*100);
+  }
 }
 
+function restart(){
+  document.getElementById("p"+current).classList.remove("active");
+  current=1;
+  document.getElementById("p1").classList.add("active");
+  window.scrollTo(0,0);
+
+  const music=document.getElementById("music");
+  music.currentTime=0;
+  music.play().catch(()=>{});
 }
 
-
-/* BALLOONS */
-
-function balloons(){
-
-for(let i=0;i<25;i++){
-
-setTimeout(()=>{
-
-const b=document.createElement("div");
-
-b.className="balloon";
-
-b.textContent=
-["🎈","🎈","🎈","💖"][Math.floor(Math.random()*4)];
-
-b.style.left=Math.random()*100+"vw";
-
-b.style.setProperty(
-"--x",
-(Math.random()*180-90)+"px"
-);
-
-b.style.animationDuration=
-(5+Math.random()*5)+"s";
-
-document.body.appendChild(b);
-
-setTimeout(()=>b.remove(),11000);
-
-},i*120);
-
-}
-
-}
-
-
-/* FIREWORKS */
-
-function startFireworks(){
-
-goPage(10);
-
-fireworks();
-
-heartRain();
-
-}
-
-
-/* FIREWORK ENGINE */
-
-function fireworks(){
-
-const box=document.getElementById("fireworks");
-
-for(let round=0;round<12;round++){
-
-setTimeout(()=>{
-
-const cx=
-20+Math.random()*60;
-
-const cy=
-15+Math.random()*45;
-
-for(let i=0;i<45;i++){
-
-const s=document.createElement("div");
-
-s.className="spark";
-
-s.style.left=cx+"%";
-
-s.style.top=cy+"%";
-
-const angle=
-(i/45)*Math.PI*2;
-
-const distance=
-60+Math.random()*120;
-
-s.style.setProperty(
-"--x",
-Math.cos(angle)*distance+"px"
-);
-
-s.style.setProperty(
-"--y",
-Math.sin(angle)*distance+"px"
-);
-
-box.appendChild(s);
-
-setTimeout(()=>s.remove(),1600);
-
-}
-
-},round*650);
-
-}
-
-}
-
-
-/* MUSIC */
-
-function startMusic(){
-
-music.play().catch(()=>{});
-
-}
-
-function toggleMusic(){
-
-if(music.paused){
-
-music.play()
-.then(()=>{
-document.getElementById("musicBtn")
-.textContent="🎵";
-});
-
-}else{
-
-music.pause();
-
-document.getElementById("musicBtn")
-.textContent="🔇";
-
-}
-
-}
-
-
-/* BACKGROUND FLOWERS */
-
-setInterval(()=>{
-
-const f=document.createElement("div");
-
-f.className="float";
-
-f.textContent=
-["🌸","💕","✨"][Math.floor(Math.random()*3)];
-
-f.style.left=Math.random()*100+"vw";
-
-f.style.fontSize=
-(15+Math.random()*15)+"px";
-
-f.style.animationDuration=
-(5+Math.random()*5)+"s";
-
-f.style.setProperty(
-"--move",
-(Math.random()*100-50)+"px"
-);
-
-document.body.appendChild(f);
-
-setTimeout(()=>f.remove(),10000);
-
-},900);
-
-
-/* TRY MUSIC */
-
-window.addEventListener("load",()=>{
-
-music.play().catch(()=>{
-document.getElementById("musicBtn")
-.textContent="🔇";
-});
-
-});
-
+hearts();
 </script>
 
 </body>
