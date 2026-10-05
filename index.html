@@ -3,880 +3,752 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For Salma ❤️</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>For Salma 💗</title>
 
 <style>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html,body{
-    width:100%;
-    height:100%;
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
 
 body{
-    min-height:100vh;
-    overflow:hidden;
-    font-family:"Poppins",sans-serif;
-    background:
-        radial-gradient(circle at 15% 20%,rgba(255,255,255,.25),transparent 28%),
-        radial-gradient(circle at 85% 80%,rgba(255,255,255,.2),transparent 30%),
-        linear-gradient(135deg,#ff758c,#ff7eb3,#c471ed,#8e7dff);
-    background-size:200% 200%;
-    animation:bgMove 12s ease infinite;
+  min-height:100vh;
+  overflow:hidden;
+  font-family:Arial,"Noto Sans Bengali",sans-serif;
+  background:
+    radial-gradient(circle at 20% 20%,#ffd6e7,transparent 35%),
+    radial-gradient(circle at 80% 80%,#d9d7ff,transparent 35%),
+    linear-gradient(135deg,#fff0f6,#f2eaff,#e8f7ff);
+  color:#4b2840;
 }
 
-@keyframes bgMove{
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,.45),transparent);
+  animation:shine 6s infinite;
+  pointer-events:none;
 }
 
-/* PAGE */
+@keyframes shine{
+  0%{transform:translateX(-100%)}
+  100%{transform:translateX(100%)}
+}
 
 .page{
-    position:fixed;
-    inset:0;
-    display:none;
-    align-items:center;
-    justify-content:center;
-    padding:20px;
-    text-align:center;
+  position:absolute;
+  inset:0;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  z-index:2;
 }
 
 .page.active{
-    display:flex;
+  display:flex;
+  animation:pageIn .7s ease;
 }
 
-/* CARD */
+@keyframes pageIn{
+  from{opacity:0;transform:scale(.94) translateY(20px)}
+  to{opacity:1;transform:scale(1) translateY(0)}
+}
 
 .card{
-    width:min(92vw,440px);
-    max-height:92vh;
-    overflow:auto;
-    padding:38px 25px;
-    border-radius:32px;
-    background:rgba(255,255,255,.20);
-    border:1px solid rgba(255,255,255,.45);
-    backdrop-filter:blur(25px);
-    -webkit-backdrop-filter:blur(25px);
-    box-shadow:
-        0 30px 80px rgba(40,0,40,.30),
-        inset 0 1px 0 rgba(255,255,255,.65);
-    animation:cardIn .8s cubic-bezier(.2,.8,.2,1);
-}
-
-.card::-webkit-scrollbar{
-    width:0;
-}
-
-@keyframes cardIn{
-    from{
-        opacity:0;
-        transform:translateY(35px) scale(.92);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0) scale(1);
-    }
-}
-
-/* FIRST PAGE */
-
-.big-heart{
-    width:110px;
-    height:110px;
-    margin:0 auto 18px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:50%;
-    font-size:58px;
-    background:rgba(255,255,255,.28);
-    border:1px solid rgba(255,255,255,.55);
-    box-shadow:
-        0 15px 40px rgba(255,0,80,.2),
-        inset 0 2px 12px rgba(255,255,255,.6);
-    animation:heartbeat 1.5s ease-in-out infinite;
-}
-
-@keyframes heartbeat{
-    0%,100%{transform:scale(1)}
-    50%{transform:scale(1.10)}
-}
-
-.small-title{
-    color:rgba(255,255,255,.8);
-    font-size:11px;
-    letter-spacing:4px;
-    text-transform:uppercase;
+  width:min(94vw,520px);
+  max-height:90vh;
+  overflow:auto;
+  padding:30px 22px;
+  text-align:center;
+  border:1px solid rgba(255,255,255,.7);
+  border-radius:32px;
+  background:rgba(255,255,255,.55);
+  backdrop-filter:blur(18px);
+  box-shadow:
+    0 25px 70px rgba(92,40,75,.20),
+    inset 0 1px 0 white;
 }
 
 h1{
-    margin:10px 0 14px;
-    font-family:"Great Vibes",cursive;
-    font-size:52px;
-    color:white;
-    text-shadow:0 4px 20px rgba(100,0,50,.2);
+  font-size:clamp(27px,7vw,42px);
+  margin-bottom:12px;
 }
 
-.question{
-    color:white;
-    font-size:17px;
-    line-height:1.8;
+h2{
+  margin-bottom:12px;
+}
+
+.subtitle{
+  font-size:17px;
+  line-height:1.7;
+  margin:12px 0 22px;
+}
+
+.cat{
+  font-size:80px;
+  animation:catFloat 2.5s ease-in-out infinite;
+  filter:drop-shadow(0 10px 10px rgba(0,0,0,.12));
+}
+
+@keyframes catFloat{
+  50%{transform:translateY(-10px) rotate(2deg)}
+}
+
+.speech{
+  display:inline-block;
+  margin:10px auto 20px;
+  padding:12px 18px;
+  background:white;
+  border-radius:20px;
+  box-shadow:0 8px 25px rgba(0,0,0,.08);
+  font-size:15px;
 }
 
 .buttons{
-    display:flex;
-    justify-content:center;
-    gap:14px;
-    margin-top:28px;
+  display:flex;
+  justify-content:center;
+  gap:14px;
+  margin-top:22px;
+  min-height:55px;
 }
 
 button{
-    border:0;
-    outline:0;
-    padding:13px 28px;
-    border-radius:50px;
-    font-family:"Poppins",sans-serif;
-    font-size:14px;
-    font-weight:500;
-    cursor:pointer;
-    transition:transform .25s ease,box-shadow .25s ease;
-}
-
-button:hover{
-    transform:translateY(-4px) scale(1.04);
-}
-
-button:active{
-    transform:scale(.95);
+  border:0;
+  border-radius:999px;
+  padding:14px 25px;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
+  transition:.25s;
+  box-shadow:0 8px 20px rgba(0,0,0,.12);
 }
 
 .yes{
-    color:white;
-    background:linear-gradient(135deg,#ff1744,#ff5c8a);
-    box-shadow:0 12px 30px rgba(255,0,80,.40);
+  background:linear-gradient(135deg,#ff5d91,#ff8db3);
+  color:white;
+}
+
+.yes:hover{
+  transform:translateY(-3px) scale(1.04);
 }
 
 .no{
-    color:#777;
-    background:rgba(255,255,255,.88);
+  background:white;
+  color:#9b5474;
+  position:relative;
 }
-
-/* FLOWER PAGE */
-
-.flower-title{
-    color:white;
-    font-size:21px;
-    font-weight:500;
-    margin-bottom:8px;
-}
-
-.flower-subtitle{
-    color:rgba(255,255,255,.75);
-    font-size:12px;
-    margin-bottom:15px;
-}
-
-.flower-area{
-    height:300px;
-    position:relative;
-    overflow:hidden;
-    border-radius:25px;
-    background:rgba(255,255,255,.08);
-}
-
-.flower{
-    position:absolute;
-    bottom:-70px;
-    animation:flowerUp linear forwards;
-    pointer-events:none;
-}
-
-@keyframes flowerUp{
-    0%{
-        transform:translateY(0) rotate(0deg) scale(.4);
-        opacity:0;
-    }
-    15%{
-        opacity:1;
-    }
-    100%{
-        transform:translateY(-380px) rotate(360deg) scale(1.25);
-        opacity:0;
-    }
-}
-
-/* NEXT BUTTON */
 
 .next{
-    margin-top:20px;
-    color:#d6336c;
-    background:white;
-    font-weight:600;
-    box-shadow:0 10px 30px rgba(0,0,0,.15);
+  margin-top:20px;
+  background:#6d4aff;
+  color:white;
 }
 
-/* PHOTO PAGE */
-
-.photo-title{
-    color:white;
-    font-family:"Great Vibes",cursive;
-    font-size:40px;
-    margin-bottom:5px;
+/* ফুল */
+.flower{
+  position:fixed;
+  top:-80px;
+  z-index:20;
+  pointer-events:none;
+  animation:fall linear forwards;
 }
 
-.photo-subtitle{
-    color:rgba(255,255,255,.75);
-    font-size:12px;
-    margin-bottom:20px;
+@keyframes fall{
+  0%{
+    transform:translateY(-80px) rotate(0deg);
+    opacity:0;
+  }
+  10%{opacity:1}
+  100%{
+    transform:translateY(110vh) rotate(720deg);
+    opacity:.9;
+  }
 }
 
-.photos{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:12px;
+/* hearts */
+.heart{
+  position:fixed;
+  bottom:-40px;
+  pointer-events:none;
+  z-index:1;
+  animation:heartUp linear forwards;
 }
 
-.photo{
-    display:block;
-    width:100%;
-    height:175px;
-    object-fit:cover;
-    border-radius:20px;
-    border:3px solid rgba(255,255,255,.7);
-    box-shadow:0 10px 25px rgba(0,0,0,.20);
-    animation:photoIn .7s ease both;
-    background:rgba(255,255,255,.15);
+@keyframes heartUp{
+  to{
+    transform:translateY(-110vh) translateX(var(--move)) rotate(25deg);
+    opacity:0;
+  }
 }
 
-.photo:nth-child(2){
-    animation-delay:.12s;
+/* progress */
+.progress{
+  display:flex;
+  justify-content:center;
+  gap:7px;
+  margin-bottom:20px;
 }
 
-.photo:nth-child(3){
-    animation-delay:.24s;
+.dot{
+  width:9px;
+  height:9px;
+  border-radius:50%;
+  background:#d9bfd0;
 }
 
-.photo:nth-child(4){
-    animation-delay:.36s;
+.dot.active{
+  width:25px;
+  border-radius:20px;
+  background:#ff6598;
 }
 
-@keyframes photoIn{
-    from{
-        opacity:0;
-        transform:scale(.75) rotate(-4deg);
-    }
-    to{
-        opacity:1;
-        transform:scale(1) rotate(0);
-    }
+/* questions */
+.question-number{
+  font-size:13px;
+  color:#a06080;
+  margin-bottom:8px;
 }
 
-/* NOTE */
+.question{
+  font-size:23px;
+  line-height:1.5;
+  font-weight:bold;
+}
 
+/* gallery */
+.gallery{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin-top:18px;
+}
+
+.gallery img{
+  width:100%;
+  aspect-ratio:1;
+  object-fit:cover;
+  border-radius:20px;
+  border:3px solid white;
+  box-shadow:0 8px 20px rgba(0,0,0,.12);
+  transition:.3s;
+}
+
+.gallery img:hover{
+  transform:scale(1.03) rotate(1deg);
+}
+
+/* note */
 .note{
-    position:relative;
-    padding:34px 24px 28px;
-    background:linear-gradient(
-        rgba(255,255,255,.95),
-        rgba(255,250,242,.95)
-    );
-    border-radius:8px;
-    color:#49313b;
-    text-align:left;
-    box-shadow:0 25px 60px rgba(0,0,0,.25);
-    transform:rotate(-1deg);
-    overflow:hidden;
+  text-align:left;
+  background:#fffdf5;
+  padding:25px;
+  border-radius:8px;
+  box-shadow:0 15px 35px rgba(0,0,0,.15);
+  position:relative;
+  line-height:1.9;
+  font-size:16px;
 }
 
 .note::before{
-    content:"";
-    position:absolute;
-    left:0;
-    right:0;
-    top:0;
-    height:8px;
-    background:linear-gradient(
-        90deg,
-        #ff4d6d,
-        #ff9a9e,
-        #c471ed
-    );
+  content:"";
+  position:absolute;
+  left:18px;
+  top:0;
+  bottom:0;
+  width:2px;
+  background:#ffc5d9;
 }
 
-.note::after{
-    content:"";
-    position:absolute;
-    width:100px;
-    height:100px;
-    right:-40px;
-    bottom:-45px;
-    border-radius:50%;
-    background:rgba(255,120,160,.08);
-}
-
-.note h2{
-    text-align:center;
-    font-family:"Great Vibes",cursive;
-    font-size:42px;
-    color:#d6336c;
-    margin-bottom:20px;
-}
-
-.note p{
-    font-family:"Poppins",sans-serif;
-    font-size:13.5px;
-    line-height:2;
-    color:#59414c;
+.note-content{
+  padding-left:15px;
 }
 
 .signature{
-    margin-top:22px;
-    text-align:right;
-    font-family:"Great Vibes",cursive;
-    font-size:30px;
-    color:#d6336c;
+  text-align:right;
+  margin-top:20px;
+  font-weight:bold;
 }
 
-/* FLOATING */
-
-.floating{
-    position:fixed;
-    bottom:-40px;
-    pointer-events:none;
-    z-index:999;
-    animation:floatUp linear forwards;
+/* videos */
+.videos{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+  margin-top:18px;
 }
 
-@keyframes floatUp{
-    from{
-        transform:translateY(0) rotate(0deg) scale(.7);
-        opacity:0;
-    }
-    15%{
-        opacity:1;
-    }
-    to{
-        transform:translateY(-115vh) rotate(360deg) scale(1.3);
-        opacity:0;
-    }
+.video-box{
+  background:rgba(255,255,255,.7);
+  padding:10px;
+  border-radius:22px;
 }
 
-/* MUSIC */
+.video-box video{
+  width:100%;
+  border-radius:16px;
+  display:block;
+}
 
 .music{
-    position:fixed;
-    top:18px;
-    right:18px;
-    width:44px;
-    height:44px;
-    padding:0;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:50%;
-    color:white;
-    background:rgba(255,255,255,.20);
-    border:1px solid rgba(255,255,255,.4);
-    backdrop-filter:blur(10px);
-    z-index:9999;
-    font-size:18px;
+  position:fixed;
+  right:15px;
+  bottom:15px;
+  z-index:100;
+  width:48px;
+  height:48px;
+  padding:0;
+  border-radius:50%;
+  background:white;
+  font-size:20px;
 }
 
-/* MOBILE */
+.tiny{
+  font-size:12px;
+  opacity:.65;
+  margin-top:12px;
+}
 
-@media(max-width:480px){
-
-    .card{
-        padding:30px 18px;
-    }
-
-    h1{
-        font-size:45px;
-    }
-
-    .big-heart{
-        width:95px;
-        height:95px;
-        font-size:50px;
-    }
-
-    .flower-area{
-        height:270px;
-    }
-
-    .photo{
-        height:145px;
-    }
-
-    .note{
-        padding:32px 20px 25px;
-    }
-
-    .note h2{
-        font-size:38px;
-    }
-
-    .note p{
-        font-size:12.5px;
-    }
+@media(max-width:420px){
+  .card{padding:25px 16px}
+  .cat{font-size:65px}
+  .question{font-size:20px}
 }
 </style>
 </head>
 
 <body>
 
+<!-- PAGE 1 -->
+<section class="page active" id="page1">
+  <div class="card">
+    <div class="cat">🐱🎀</div>
+
+    <div class="speech">
+      🐾 একটা ছোট্ট প্রশ্ন আছে...
+    </div>
+
+    <h1>সালমা 💗</h1>
+
+    <p class="subtitle">
+      তুমি কি <b>Saju</b>-কে সত্যি সত্যি ভালোবাসো? 🥺🌸
+    </p>
+
+    <div class="buttons">
+      <button class="yes" onclick="answerYes(2)">
+        হ্যাঁ 💖
+      </button>
+
+      <button class="no" id="no1" onmouseover="moveNo(this)" ontouchstart="moveNo(this)">
+        না 🙈
+      </button>
+    </div>
+
+    <p class="tiny">একটা ছোট্ট surprise অপেক্ষা করছে... 🎁</p>
+  </div>
+</section>
+
+
+<!-- PAGE 2 QUESTIONS -->
+<section class="page" id="page2">
+  <div class="card">
+
+    <div class="progress">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
+    <div class="cat">🐱💗</div>
+
+    <div class="question-number" id="qNumber">
+      প্রশ্ন ১ / ৩
+    </div>
+
+    <div class="question" id="questionText">
+      তুমি কি সত্যি Saju-কে ভালোবাসো? 💕
+    </div>
+
+    <div class="buttons">
+      <button class="yes" onclick="nextQuestion()">
+        হ্যাঁ 💖
+      </button>
+
+      <button class="no" id="questionNo"
+        onmouseover="moveNo(this)"
+        ontouchstart="moveNo(this)">
+        না 🙈
+      </button>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- PAGE 3 FLOWERS -->
+<section class="page" id="page3">
+  <div class="card">
+    <div class="cat">🐱🌸</div>
+
+    <h1>একটু অপেক্ষা... 🌷</h1>
+
+    <p class="subtitle">
+      তোমার জন্য ছোট্ট একটা ফুলের surprise তৈরি হচ্ছে... 💐
+    </p>
+
+    <button class="next" onclick="goPage(4)">
+      ফুলগুলো দেখেছি 🌸 → Next
+    </button>
+  </div>
+</section>
+
+
+<!-- PAGE 4 PHOTOS -->
+<section class="page" id="page4">
+  <div class="card">
+
+    <div class="cat">🐱📸</div>
+
+    <h2>কিছু সুন্দর স্মৃতি 💗</h2>
+
+    <p class="subtitle">
+      এই ছবিগুলো surprise-এর ছোট্ট একটা অংশ... 🌸
+    </p>
+
+    <div class="gallery">
+      <img src="./salma1.jpg" alt="Salma 1">
+      <img src="./salma2.jpg" alt="Salma 2">
+      <img src="./salma3.jpg" alt="Salma 3">
+      <img src="./salma4.jpg" alt="Salma 4">
+    </div>
+
+    <button class="next" onclick="goPage(5)">
+      একটা চিঠি আছে 💌 → Next
+    </button>
+
+  </div>
+</section>
+
+
+<!-- PAGE 5 NOTE -->
+<section class="page" id="page5">
+  <div class="card">
+
+    <div class="cat">🐱💌</div>
+
+    <h2>একটা ছোট্ট চিঠি 💗</h2>
+
+    <div class="note">
+      <div class="note-content">
+
+        <b>প্রিয় সালমা, 🫶🏻💝</b>
+
+        <br><br>
+
+        এই ছোট্ট ওয়েবসাইটটা হয়তো খুব বড় কোনো উপহার না,
+        কিন্তু এর প্রতিটা অংশ তোমার জন্য একটা সুন্দর মুহূর্ত
+        তৈরি করার ছোট্ট একটা চেষ্টা। 🌸
+
+        <br><br>
+
+        জীবনে কিছু মানুষ আসে, যাদের উপস্থিতি
+        সাধারণ একটা দিনকেও একটু বেশি সুন্দর করে তোলে। 💗
+
+        <br><br>
+
+        এই surprise-টা তোমার জন্যই বানানো। 🌷
+
+        <br><br>
+
+        <b>ভালো থেকো, হাসিখুশি থেকো। ❤️‍🩹</b>
+
+        <div class="signature">
+          — Saju 💗
+        </div>
+
+      </div>
+    </div>
+
+    <button class="next" onclick="goPage(6)">
+      শেষ surprise দেখবে? 🎁
+    </button>
+
+  </div>
+</section>
+
+
+<!-- PAGE 6 VIDEO -->
+<section class="page" id="page6">
+  <div class="card">
+
+    <div class="cat">🐱🎬💗</div>
+
+    <h2>শেষ surprise 🎁</h2>
+
+    <p class="subtitle">
+      তোমার জন্য বানানো ছোট্ট Love Video 💕
+    </p>
+
+    <div class="videos">
+
+      <div class="video-box">
+        <video controls playsinline preload="metadata">
+          <source src="./love1.mp4" type="video/mp4">
+          তোমার browser video support করে না।
+        </video>
+      </div>
+
+      <div class="video-box">
+        <video controls playsinline preload="metadata">
+          <source src="./love2.mp4" type="video/mp4">
+          তোমার browser video support করে না।
+        </video>
+      </div>
+
+    </div>
+
+    <p class="tiny">
+      প্রতিটি ভিডিও প্রায় ৯ সেকেন্ডের হলে surpriseটা আরও সুন্দর হবে। 🌸
+    </p>
+
+  </div>
+</section>
+
+
 <!-- MUSIC -->
-
-<audio
-    id="bgMusic"
-    src="./song.mp3"
-    loop
-    preload="auto">
-</audio>
-
-<button
-    class="music"
-    id="musicBtn"
-    onclick="toggleMusic()">
-    🔇
+<button class="music" id="musicBtn" onclick="toggleMusic()">
+  🎵
 </button>
 
-
-<!-- PAGE 1 -->
-
-<section class="page active" id="page1">
-
-    <div class="card">
-
-        <div class="big-heart">
-            ❤️
-        </div>
-
-        <div class="small-title">
-            A Little Surprise
-        </div>
-
-        <h1>
-            I Love You Salma
-        </h1>
-
-        <div class="question">
-            তুমি কি আমাকে ভালোবাসো? 🥺❤️
-        </div>
-
-        <div class="buttons">
-
-            <button
-                class="yes"
-                onclick="goToFlowers()">
-                Yes ❤️
-            </button>
-
-            <button
-                class="no"
-                type="button">
-                No 🙈
-            </button>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- PAGE 2 -->
-
-<section class="page" id="page2">
-
-    <div class="card">
-
-        <div class="flower-title">
-            🫶🏻 শুধু তোমার জন্য 💝
-        </div>
-
-        <div class="flower-subtitle">
-            কিছু ফুল, কিছু অনুভূতি... ❤️
-        </div>
-
-        <div
-            class="flower-area"
-            id="flowerArea">
-        </div>
-
-        <button
-            class="next"
-            onclick="goToPhotos()">
-            Next ➜
-        </button>
-
-    </div>
-
-</section>
-
-
-<!-- PAGE 3 -->
-
-<section class="page" id="page3">
-
-    <div class="card">
-
-        <div class="photo-title">
-            Beautiful Memories
-        </div>
-
-        <div class="photo-subtitle">
-            MY LIFE MY_LOVE 💝🫶🏻
-        </div>
-
-        <div class="photos">
-
-    <img class="photo"
-         src="https://raw.githubusercontent.com/mdsajuislam764263-max/MY_LOVE_S/main/salma1.jpg"
-         alt="Salma">
-
-    <img class="photo"
-         src="https://raw.githubusercontent.com/mdsajuislam764263-max/MY_LOVE_S/main/salma2.jpg"
-         alt="Salma">
-
-    <img class="photo"
-         src="https://raw.githubusercontent.com/mdsajuislam764263-max/MY_LOVE_S/main/salma3.jpg"
-         alt="Salma">
-
-    <img class="photo"
-         src="https://raw.githubusercontent.com/mdsajuislam764263-max/MY_LOVE_S/main/salma4.jpg"
-         alt="Salma">
-
-        </div>
-
-        <button
-            class="next"
-            onclick="goToNote()">
-            Next ➜
-        </button>
-
-    </div>
-
-</section>
-
-
-<!-- PAGE 4 -->
-
-<section class="page" id="page4">
-
-    <div class="card">
-
-        <div class="note">
-
-            <h2>
-                For Salma 🥰🌸
-            </h2>
-
-            <p>
-
-                প্রিয় সালমা, 🫶🏻💝
-
-                <br><br>
-
-                এই ছোট্ট ওয়েবসাইটটা হয়তো খুব
-                বড় কোনো উপহার না, কিন্তু এর
-                প্রতিটা অংশ তোমার জন্য একটু
-                সুন্দর একটা মুহূর্ত তৈরি করার
-                ছোট্ট একটা চেষ্টা।
-
-                <br><br>
-
-                জীবনে কিছু মানুষ আসে, যাদের
-                উপস্থিতি সাধারণ একটা দিনকেও
-                একটু বেশি সুন্দর করে তোলে।
-                তোমাকে নিয়ে আমার অনুভূতিটাও
-                ঠিক তেমনই।
-
-                <br><br>
-
-                তোমার হাসি, তোমার কথা আর
-                তোমার ছোট ছোট মুহূর্তগুলো
-                আমার কাছে অনেক মূল্যবান।
-
-                <br><br>
-
-                হয়তো সব কথা মুখে বলা যায় না,
-                তাই এই ছোট্ট পেজটার মাধ্যমে
-                কিছু কথা বলতে চেয়েছি।
-
-                <br><br>
-
-                I really love u salmú 🫶🏻💝
-
-                <br>
-
-                আল্লাহ যেন তোমাকে সারাজীবন
-                আমার করে রাখে। 🫶🏻💝🥰🥀
-
-            </p>
-
-            <div class="signature">
-                — তোমার জন্য 💗
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
+<audio id="bgMusic" src="./song.mp3" loop preload="auto"></audio>
 
 
 <script>
 
-/* MUSIC */
+let currentPage = 1;
 
-const bgMusic =
-    document.getElementById("bgMusic");
+const questions = [
+  "তুমি কি সত্যি Saju-কে ভালোবাসো? 💕",
+  "Saju-এর সাথে সুন্দর সুন্দর মুহূর্ত কাটাতে চাও? 🌸",
+  "এই ছোট্ট surprise-টা accept করবে? 🎁💖"
+];
 
-const musicBtn =
-    document.getElementById("musicBtn");
+let qIndex = 0;
 
-
-function startMusic(){
-
-    bgMusic.volume = 0.65;
-
-    bgMusic.play()
-        .then(function(){
-
-            musicBtn.textContent = "🎵";
-
-        })
-        .catch(function(){
-
-            musicBtn.textContent = "🔇";
-
-        });
-}
+const music = document.getElementById("bgMusic");
+const musicBtn = document.getElementById("musicBtn");
 
 
-function toggleMusic(){
+/* PAGE CHANGE */
+function goPage(number){
 
-    if(bgMusic.paused){
+  document.querySelectorAll(".page").forEach(p=>{
+    p.classList.remove("active");
+  });
 
-        bgMusic.volume = 0.65;
+  const page = document.getElementById("page"+number);
 
-        bgMusic.play()
-            .then(function(){
+  if(page){
+    page.classList.add("active");
+    currentPage = number;
+  }
 
-                musicBtn.textContent = "🎵";
-
-            })
-            .catch(function(){
-
-                musicBtn.textContent = "🔇";
-
-            });
-
-    }else{
-
-        bgMusic.pause();
-
-        musicBtn.textContent = "🔇";
-
-    }
-
-}
-
-
-/* PAGE SYSTEM */
-
-function showPage(id){
-
-    document
-        .querySelectorAll(".page")
-        .forEach(function(page){
-
-            page.classList.remove("active");
-
-        });
-
-    document
-        .getElementById(id)
-        .classList.add("active");
 }
 
 
 /* YES */
+function answerYes(page){
 
-function goToFlowers(){
+  startMusic();
 
-    startMusic();
+  if(page === 2){
 
-    showPage("page2");
+    qIndex = 0;
 
-    createFlowers();
+    document.getElementById("questionText").textContent =
+      questions[qIndex];
+
+    document.getElementById("qNumber").textContent =
+      "প্রশ্ন ১ / ৩";
+
+    goPage(2);
+
+  }
+
+}
+
+
+/* QUESTIONS */
+function nextQuestion(){
+
+  startMusic();
+
+  qIndex++;
+
+  if(qIndex >= questions.length){
+
+    flowerStorm(70);
+
+    setTimeout(()=>{
+      goPage(3);
+    },1200);
+
+    return;
+  }
+
+  document.getElementById("questionText").textContent =
+    questions[qIndex];
+
+  document.getElementById("qNumber").textContent =
+    "প্রশ্ন " + (qIndex+1) + " / ৩";
+
+}
+
+
+/* NO BUTTON MOVE */
+function moveNo(button){
+
+  const parent = button.parentElement;
+
+  const rect = parent.getBoundingClientRect();
+
+  const maxX = Math.max(0, rect.width - button.offsetWidth);
+  const maxY = 30;
+
+  const x = Math.random() * maxX - maxX/2;
+  const y = (Math.random() * maxY) - maxY/2;
+
+  button.style.transform =
+    `translate(${x}px,${y}px)`;
+
 }
 
 
 /* FLOWERS */
+function flowerStorm(amount){
 
-function createFlowers(){
+  const flowers = [
+    "🌸","🌷","🌹","🌺","💐","🌼","🪻","🌻"
+  ];
 
-    const area =
-        document.getElementById("flowerArea");
+  for(let i=0;i<amount;i++){
 
-    area.innerHTML = "";
+    setTimeout(()=>{
 
-    const flowers = [
-        "🌸",
-        "🌹",
-        "🌷",
-        "🌺",
-        "🌻",
-        "🌼",
-        "💐",
-        "💮"
-    ];
+      const flower = document.createElement("div");
 
-    for(let i = 0; i < 70; i++){
+      flower.className = "flower";
 
-        setTimeout(function(){
+      flower.textContent =
+        flowers[Math.floor(Math.random()*flowers.length)];
 
-            const flower =
-                document.createElement("div");
+      flower.style.left =
+        Math.random()*100 + "vw";
 
-            flower.className = "flower";
+      flower.style.fontSize =
+        (18 + Math.random()*28) + "px";
 
-            flower.innerHTML =
-                flowers[
-                    Math.floor(
-                        Math.random() * flowers.length
-                    )
-                ];
+      flower.style.animationDuration =
+        (3 + Math.random()*4) + "s";
 
-            flower.style.left =
-                Math.random() * 100 + "%";
+      document.body.appendChild(flower);
 
-            flower.style.fontSize =
-                (22 + Math.random() * 30) + "px";
+      setTimeout(()=>{
+        flower.remove();
+      },8000);
 
-            flower.style.animationDuration =
-                (3 + Math.random() * 3) + "s";
+    },i*45);
 
-            area.appendChild(flower);
-
-            setTimeout(function(){
-
-                flower.remove();
-
-            },6500);
-
-        },i * 70);
-
-    }
-}
-
-
-/* PHOTOS */
-
-function goToPhotos(){
-
-    showPage("page3");
+  }
 
 }
 
 
-/* NOTE */
+/* HEARTS */
+function createHeart(){
 
-function goToNote(){
+  const h = document.createElement("div");
 
-    showPage("page4");
+  h.className = "heart";
 
-    createFloating();
+  h.textContent =
+    ["💗","💖","💕","❤️","🌸"][Math.floor(Math.random()*5)];
+
+  h.style.left =
+    Math.random()*100 + "vw";
+
+  h.style.fontSize =
+    (15 + Math.random()*20) + "px";
+
+  h.style.animationDuration =
+    (4 + Math.random()*4) + "s";
+
+  h.style.setProperty(
+    "--move",
+    (Math.random()*120-60) + "px"
+  );
+
+  document.body.appendChild(h);
+
+  setTimeout(()=>{
+    h.remove();
+  },9000);
+
+}
+
+setInterval(createHeart,700);
+
+
+/* MUSIC */
+function startMusic(){
+
+  music.play()
+    .then(()=>{
+      musicBtn.textContent = "🎵";
+    })
+    .catch(()=>{
+      musicBtn.textContent = "🔇";
+    });
+
+}
+
+function toggleMusic(){
+
+  if(music.paused){
+
+    music.play()
+      .then(()=>{
+        musicBtn.textContent = "🎵";
+      });
+
+  }else{
+
+    music.pause();
+    musicBtn.textContent = "🔇";
+
+  }
 
 }
 
 
-/* FLOATING */
-
-function createFloating(){
-
-    const symbols = [
-        "❤️",
-        "💗",
-        "💕",
-        "🌸",
-        "🌷",
-        "✨",
-        "💐",
-        "♡"
-    ];
-
-    for(let i = 0; i < 45; i++){
-
-        setTimeout(function(){
-
-            const item =
-                document.createElement("div");
-
-            item.className = "floating";
-
-            item.innerHTML =
-                symbols[
-                    Math.floor(
-                        Math.random() * symbols.length
-                    )
-                ];
-
-            item.style.left =
-                Math.random() * 100 + "vw";
-
-            item.style.fontSize =
-                (15 + Math.random() * 25) + "px";
-
-            item.style.animationDuration =
-                (4 + Math.random() * 4) + "s";
-
-            document.body.appendChild(item);
-
-            setTimeout(function(){
-
-                item.remove();
-
-            },8500);
-
-        },i * 100);
-
-    }
-}
+/* INITIAL FLOWERS */
+setTimeout(()=>{
+  flowerStorm(25);
+},500);
 
 
-/* TRY MUSIC AUTOPLAY */
+/* TRY AUTOPLAY */
+window.addEventListener("load",()=>{
 
-window.addEventListener("load",function(){
-
-    bgMusic.volume = 0.65;
-
-    bgMusic.play()
-        .then(function(){
-
-            musicBtn.textContent = "🎵";
-
-        })
-        .catch(function(){
-
-            /*
-             Mobile browser autoplay blocked.
-             Music will start when YES is clicked.
-            */
-
-            musicBtn.textContent = "🔇";
-
-        });
+  music.play()
+    .then(()=>{
+      musicBtn.textContent="🎵";
+    })
+    .catch(()=>{
+      musicBtn.textContent="🔇";
+    });
 
 });
 
